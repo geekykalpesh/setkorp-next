@@ -33,7 +33,7 @@ export const Navbar = () => {
   }, []);
 
   return (
-    <header className="sticky top-0 w-full z-50 glass-header">
+    <header className="sticky top-0 w-full z-50 glass-header-no-border">
       <nav className="container mx-auto px-6 py-4 flex items-center">
         {/* Logo Group */}
         <div className="flex-1 flex items-center">
@@ -70,6 +70,8 @@ export const Navbar = () => {
           </button>
         </div>
       </nav>
+      {/* Full-width border */}
+      <div className="w-full h-px bg-gradient-to-r from-transparent via-slate-200 to-transparent"></div>
 
       {/* Mobile Menu Dropdown */}
       <div className={`fixed top-0 left-0 right-0 w-full bg-white shadow-2xl z-[60] lg:hidden flex flex-col p-8 pt-24 transition-transform duration-400 ease-in-out ${isMenuOpen ? 'translate-y-0' : '-translate-y-full'}`}>

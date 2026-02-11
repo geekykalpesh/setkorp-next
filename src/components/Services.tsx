@@ -1,5 +1,6 @@
 import { Building2, Landmark, Building, Calculator, CheckCircle, ShieldCheck, CreditCard, Globe, MapPin, Key, FileCheck, Layout, PieChart, Lock, Search, Rocket, Zap, Handshake, Coins, Compass, Navigation, FileText } from "lucide-react";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 const services = [
   {
@@ -11,11 +12,16 @@ const services = [
     color: "brand",
     textColor: "text-brand",
     bgColor: "from-brand/5",
-    graphicBg: "from-brand/10",
+    graphicBg: "from-red-50 via-orange-50 to-amber-50",
+    graphicOverlay: "from-brand/5 via-transparent to-orange-100/30",
+    graphicBlur1: "bg-brand/10",
+    graphicBlur2: "bg-orange-200/20",
+    iconGradient: "from-brand to-brandhover",
     graphicIcon: Building2,
     graphicTitle: "Business Setup",
     graphicSub: "Mainland & Freezone Experts",
-    graphicTags: [{ icon: CheckCircle, label: "Licensed" }, { icon: ShieldCheck, label: "Compliant" }]
+    graphicTags: [{ icon: CheckCircle, label: "Licensed" }, { icon: ShieldCheck, label: "Compliant" }],
+    image: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=2670&auto=format&fit=crop"
   },
   {
     number: "02",
@@ -26,11 +32,16 @@ const services = [
     color: "gold",
     textColor: "text-gold",
     bgColor: "from-gold/5",
-    graphicBg: "from-gold/10",
+    graphicBg: "from-amber-50 via-yellow-50 to-orange-50",
+    graphicOverlay: "from-gold/8 via-transparent to-amber-100/40",
+    graphicBlur1: "bg-gold/15",
+    graphicBlur2: "bg-amber-200/25",
+    iconGradient: "from-gold to-amber-500",
     graphicIcon: Landmark,
     graphicTitle: "Corporate Banking",
     graphicSub: "UAE's Premier Banking Liaison",
-    graphicTags: [{ icon: CreditCard, label: "Multi-Currency" }, { icon: Globe, label: "Global Access" }]
+    graphicTags: [{ icon: CreditCard, label: "Multi-Currency" }, { icon: Globe, label: "Global Access" }],
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2426&auto=format&fit=crop"
   },
   {
     number: "03",
@@ -40,12 +51,17 @@ const services = [
     icon: Building,
     color: "success",
     bgColor: "from-success/5",
-    graphicBg: "from-success/10",
+    graphicBg: "from-emerald-50 via-green-50 to-teal-50",
+    graphicOverlay: "from-success/8 via-transparent to-emerald-100/40",
+    graphicBlur1: "bg-success/15",
+    graphicBlur2: "bg-teal-200/25",
+    iconGradient: "from-success to-emerald-600",
     textColor: "text-success",
     graphicIcon: Building,
     graphicTitle: "Office Solutions",
     graphicSub: "Prime Dubai Locations",
-    graphicTags: [{ icon: MapPin, label: "Locations" }, { icon: Key, label: "Ready" }]
+    graphicTags: [{ icon: MapPin, label: "Locations" }, { icon: Key, label: "Ready" }],
+    image: "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2669&auto=format&fit=crop"
   },
   {
     number: "04",
@@ -56,11 +72,16 @@ const services = [
     color: "blue-400",
     textColor: "text-blue-400",
     bgColor: "from-blue-400/5",
-    graphicBg: "from-blue-400/10",
+    graphicBg: "from-blue-50 via-indigo-50 to-sky-50",
+    graphicOverlay: "from-blue-400/10 via-transparent to-indigo-100/40",
+    graphicBlur1: "bg-blue-400/15",
+    graphicBlur2: "bg-indigo-200/25",
+    iconGradient: "from-blue-400 to-indigo-500",
     graphicIcon: Calculator,
     graphicTitle: "Financial Services",
     graphicSub: "Compliance & Expert Advisory",
-    graphicTags: [{ icon: FileCheck, label: "Filing" }, { icon: Lock, label: "Secure" }]
+    graphicTags: [{ icon: FileCheck, label: "Filing" }, { icon: Lock, label: "Secure" }],
+    image: "https://images.unsplash.com/photo-1586281380349-632531db7ed4?q=80&w=2670&auto=format&fit=crop"
   }
 ];
 
@@ -85,7 +106,7 @@ export const Services = () => {
       <div className="relative space-y-4 md:space-y-0">
         {services.map((service, index) => (
           <div key={index} className="sticky top-12 md:top-20 h-auto md:h-[90vh] container mx-auto px-4 md:px-20 flex items-center justify-center" style={{ zIndex: index + 1 }}>
-            <div className="w-full max-w-7xl md:h-[70vh] bg-white border border-slate-200 rounded-2xl md:rounded-lg overflow-hidden grid md:grid-cols-2 shadow-xl md:shadow-2xl">
+            <div className="w-full max-w-7xl md:h-[70vh] bg-white border-2 border-slate-300 rounded-2xl md:rounded-3xl overflow-hidden grid md:grid-cols-2 shadow-2xl hover:shadow-[0_25px_50px_-12px_rgba(0,0,0,0.35)] transition-shadow duration-300 ring-1 ring-slate-200/50">
               {/* LEFT SIDE: CONTENT */}
               <div className={cn("p-8 md:p-16 flex flex-col justify-center border-b md:border-b-0 md:border-r border-slate-100 relative bg-gradient-to-br to-transparent", service.bgColor)}>
                 <div className="relative z-10">
@@ -123,34 +144,44 @@ export const Services = () => {
               {/* RIGHT SIDE: GRAPHIC */}
               <div className={cn("p-8 md:p-10 flex items-center justify-center relative overflow-hidden hidden sm:flex bg-gradient-to-br to-slate-50", service.graphicBg)}>
                 <div className="w-full h-full flex items-center justify-center">
-                  <div className={cn("relative w-full h-full max-w-lg bg-white rounded-2xl shadow-xl p-8 flex flex-col items-center justify-center border", 
-                    service.color === 'brand' ? 'border-brand/20' :
-                    service.color === 'gold' ? 'border-gold/20' :
-                    service.color === 'success' ? 'border-success/20' :
-                    'border-blue-400/20'
+                  <div className={cn("relative w-full h-full max-w-lg bg-white rounded-3xl shadow-[0_20px_60px_-15px_rgba(0,0,0,0.4)] hover:shadow-[0_30px_80px_-15px_rgba(0,0,0,0.5)] overflow-hidden flex flex-col items-center justify-center border-2 transition-all duration-500 hover:scale-[1.02] ring-2 ring-offset-4", 
+                    service.color === 'brand' ? 'border-brand/30 ring-brand/20' :
+                    service.color === 'gold' ? 'border-gold/30 ring-gold/20' :
+                    service.color === 'success' ? 'border-success/30 ring-success/20' :
+                    'border-blue-400/30 ring-blue-400/20'
                   )}>
-                    <div className={cn("w-24 h-24 md:w-32 md:h-32 rounded-full flex items-center justify-center mb-6", 
-                      service.color === 'brand' ? 'bg-brand/10' :
-                      service.color === 'gold' ? 'bg-gold/10' :
-                      service.color === 'success' ? 'bg-success/10' :
-                      'bg-blue-400/10'
-                    )}>
-                      <service.graphicIcon className={cn("w-12 h-12 md:w-16 md:h-16", service.textColor)} />
+           via      {/* Background Image */}
+                    <div className="absolute inset-0 z-0">
+                      <Image 
+                        src={service.image} 
+                        alt={service.title} 
+                        fill 
+                        className="object-cover opacity-100"
+                        sizes="(max-width: 768px) 100vw, 50vw"
+                      />
+                      {/* Black gradient overlay for dramatic effect */}
+                      <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/40"></div>
                     </div>
-                    <h4 className="text-xl font-bold text-slate-900 mb-2 text-center font-display">{service.graphicTitle}</h4>
-                    <p className="text-xs md:text-sm text-slate-600 text-center mb-6">{service.graphicSub}</p>
-                    <div className="flex flex-wrap justify-center gap-2 md:gap-3">
-                      {service.graphicTags.map((tag, i) => (
-                        <div key={i} className={cn("px-3 md:px-4 py-2 rounded-lg flex items-center", 
-                          service.color === 'brand' ? 'bg-brand/10' :
-                          service.color === 'gold' ? 'bg-gold/10' :
-                          service.color === 'success' ? 'bg-success/10' :
-                          'bg-blue-400/10'
-                        )}>
-                          <tag.icon className={cn("w-4 h-4 mr-2", service.textColor)} />
-                          <span className="text-[10px] md:text-xs font-semibold text-slate-700">{tag.label}</span>
-                        </div>
-                      ))}
+
+                    <div className="relative z-10 p-8 flex flex-col items-center w-full">
+                      <div className={cn("w-24 h-24 md:w-32 md:h-32 rounded-full flex items-center justify-center mb-6 bg-gradient-to-br shadow-lg", 
+                        service.color === 'brand' ? 'from-brand/40 to-brand/20 border-2 border-brand/30' :
+                        service.color === 'gold' ? 'from-gold/40 to-gold/20 border-2 border-gold/30' :
+                        service.color === 'success' ? 'from-success/40 to-success/20 border-2 border-success/30' :
+                        'from-blue-400/40 to-blue-400/20 border-2 border-blue-400/30'
+                      )}>
+                        <service.graphicIcon className={cn("w-12 h-12 md:w-16 md:h-16", service.textColor)} />
+                      </div>
+                      <h4 className="text-xl font-bold text-white mb-2 text-center font-display">{service.graphicTitle}</h4>
+                      <p className="text-xs md:text-sm text-white/90 text-center mb-6">{service.graphicSub}</p>
+                      <div className="flex flex-wrap justify-center gap-2 md:gap-3">
+                        {service.graphicTags.map((tag, i) => (
+                          <div key={i} className="px-3 md:px-4 py-2 rounded-lg flex items-center bg-white/20 backdrop-blur-sm border border-white/40">
+                            <tag.icon className="w-4 h-4 mr-2 text-white" />
+                            <span className="text-[10px] md:text-xs font-semibold text-white">{tag.label}</span>
+                          </div>
+                        ))}
+                      </div>
                     </div>
                   </div>
                 </div>
