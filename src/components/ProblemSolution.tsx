@@ -1,7 +1,6 @@
 import { useRef } from "react";
 import { XCircle, AlertCircle, Check } from "lucide-react";
 import CheckedIcon from "./ui/checked-icon";
-import { CardSpotlight } from "./ui/card-spotlight";
 import type { AnimatedIconHandle } from "./ui/types";
 
 export const ProblemSolution = () => {
@@ -44,21 +43,18 @@ export const ProblemSolution = () => {
           </div>
 
           {/* With Setkorp */}
-
-          {/* With Setkorp */}
-          <CardSpotlight 
+          <div 
             onMouseEnter={() => checkRef.current?.startAnimation()}
             onMouseLeave={() => checkRef.current?.stopAnimation()}
             className="bg-gradient-to-br from-red-50 to-orange-50 p-8 md:p-12 rounded-lg border-2 border-brand shadow-xl shadow-brand/10 cursor-pointer"
-            dotColors={[[227, 88, 77], [220, 38, 38]]}
           >
-            <div className="flex items-center gap-3 mb-8 relative z-20">
+            <div className="flex items-center gap-3 mb-8">
               <div className="w-12 h-12 bg-brand text-white rounded-full flex items-center justify-center">
                 <CheckedIcon ref={checkRef} color="white" size={24} />
               </div>
               <h3 className="text-2xl font-bold text-primary font-display">With Setkorp</h3>
             </div>
-            <ul className="space-y-4 relative z-20">
+            <ul className="space-y-4">
               {[
                 "Clear roadmap: We match you to the perfect freezone or mainland structure",
                 "Banking relationships secured within 7 business days",
@@ -71,7 +67,7 @@ export const ProblemSolution = () => {
                 </li>
               ))}
             </ul>
-          </CardSpotlight>
+          </div>
         </div>
       </div>
     </section>

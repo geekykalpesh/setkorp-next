@@ -36,12 +36,12 @@ export const Hero = () => {
               <Link 
                 href="#contact" 
                 onClick={() => phoneRef.current?.startAnimation()}
-                className="group w-full sm:w-auto cursor-pointer bg-gradient-to-r from-brand to-brandhover text-white px-6 md:px-10 py-4 md:py-5 rounded-lg text-sm md:text-lg font-black transition-all duration-200 shadow-[0_20px_40px_-12px_rgba(227,88,77,0.4)] hover:shadow-[0_30px_60px_-12px_rgba(227,88,77,0.5)] hover:-translate-y-1 ring-1 ring-white/20 ring-inset flex items-center justify-center relative overflow-hidden focus:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2" 
+                className="group w-full sm:w-auto cursor-pointer bg-brand text-white px-8 py-4 rounded-lg text-base md:text-lg font-bold transition-all duration-300 shadow-lg shadow-brand/25 hover:shadow-xl hover:shadow-brand/40 hover:-translate-y-1 hover:bg-brandhover flex items-center justify-center focus:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2" 
                 aria-label="Book your free strategy call"
               >
-                <span className="relative z-10 flex items-center">
+                <span className="flex items-center gap-2">
                   Book Your Free Strategy Call
-                  <PhoneVolumeIcon ref={phoneRef} size={20} className="ml-2" />
+                  <PhoneVolumeIcon ref={phoneRef} size={20} className="stroke-[2.5px]" />
                 </span>
               </Link>
               
@@ -49,11 +49,11 @@ export const Hero = () => {
               <Link 
                 href="#calculator" 
                 onClick={() => calcRef.current?.startAnimation()}
-                className="group w-full sm:w-auto cursor-pointer bg-white/95 backdrop-blur-md text-primary border border-slate-200 px-6 md:px-10 py-4 md:py-5 rounded-lg text-sm md:text-lg font-bold hover:bg-white hover:-translate-y-1 transition-all duration-200 flex items-center justify-center shadow-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2" 
+                className="group w-full sm:w-auto cursor-pointer bg-white text-slate-700 border border-slate-200 px-8 py-4 rounded-lg text-base md:text-lg font-bold transition-all duration-300 shadow-sm hover:shadow-md hover:border-brand/20 hover:text-brand hover:-translate-y-1 flex items-center justify-center focus:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2" 
                 aria-label="Open setup cost calculator"
               >
-                <span className="flex items-center">
-                  <CalculatorIcon ref={calcRef} size={20} className="mr-2 text-brand" />
+                <span className="flex items-center gap-2">
+                  <CalculatorIcon ref={calcRef} size={20} className="text-brand stroke-[2.5px]" />
                   Setup Cost Calculator
                 </span>
               </Link>
