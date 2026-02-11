@@ -1,4 +1,4 @@
-import { Linkedin, Twitter, MapPin, Mail } from "lucide-react";
+import { Linkedin, Twitter, MapPin, Mail, Instagram, Facebook, Phone } from "lucide-react";
 import Link from "next/link";
 
 export const Footer = () => {
@@ -14,21 +14,24 @@ export const Footer = () => {
               Expert business incorporation, banking, real estate & accounting for freezone and mainland setups in Dubai and UAE.
             </p>
             <div className="flex gap-4">
-              <Link href="#" className="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-brand transition-colors">
+              <Link href="http://linkedin.com/company/setkorp/about/" target="_blank" className="cursor-pointer w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-brand transition-colors">
                 <Linkedin className="w-5 h-5" />
               </Link>
-              <Link href="#" className="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-brand transition-colors">
-                <Twitter className="w-5 h-5" />
+              <Link href="https://www.instagram.com/setkorp.dubai/" target="_blank" className="cursor-pointer w-10 h-10 bg-white/5 rounded-full flex-center hover:bg-brand transition-colors flex items-center justify-center">
+                <Instagram className="w-5 h-5" />
+              </Link>
+              <Link href="https://www.facebook.com/people/Setkorp/100069013263499/" target="_blank" className="cursor-pointer w-10 h-10 bg-white/5 rounded-full flex-center hover:bg-brand transition-colors flex items-center justify-center">
+                <Facebook className="w-5 h-5" />
               </Link>
             </div>
           </div>
           <div>
             <h4 className="font-bold mb-6 uppercase tracking-widest text-xs text-brand font-display">Quick Links</h4>
             <ul className="space-y-4 text-slate-400 text-sm">
-              <li><Link href="#industries" className="hover:text-brand transition-colors">Industries</Link></li>
-              <li><Link href="#services" className="hover:text-brand transition-colors">Services</Link></li>
-              <li><Link href="#how-it-works" className="hover:text-brand transition-colors">How It Works</Link></li>
-              <li><Link href="#faq" className="hover:text-brand transition-colors">FAQs</Link></li>
+              <li><Link href="#industries" className="cursor-pointer hover:text-brand transition-colors">Industries</Link></li>
+              <li><Link href="#services" className="cursor-pointer hover:text-brand transition-colors">Services</Link></li>
+              <li><Link href="#how-it-works" className="cursor-pointer hover:text-brand transition-colors">How It Works</Link></li>
+              <li><Link href="#faq" className="cursor-pointer hover:text-brand transition-colors">FAQs</Link></li>
             </ul>
           </div>
           <div>
@@ -36,11 +39,15 @@ export const Footer = () => {
             <ul className="space-y-4 text-slate-400 text-sm">
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-brand shrink-0" />
-                <span>123 Business Bay, Premium Tower, Dubai, UAE</span>
+                <span>101, Building – A-2, Dubai Digital Park, Dubai, UAE</span>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-brand shrink-0" />
-                <span>contact@setkorp.ae</span>
+                <a href="mailto:saraansh@setkorp.com" className="cursor-pointer hover:text-brand transition-colors">saraansh@setkorp.com</a>
+              </li>
+              <li className="flex items-center gap-3">
+                <Phone className="w-5 h-5 text-brand shrink-0" />
+                <a href="tel:+971561166524" className="cursor-pointer hover:text-brand transition-colors">+971 56 116 6524</a>
               </li>
             </ul>
           </div>
@@ -48,8 +55,8 @@ export const Footer = () => {
         <div className="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6 text-xs md:text-sm text-slate-500">
           <p>&copy; 2024 Setkorp Business Consultancy. All rights reserved.</p>
           <div className="flex gap-4 md:gap-8">
-            <Link href="#" className="hover:text-white transition-colors">Privacy Policy</Link>
-            <Link href="#" className="hover:text-white transition-colors">Terms of Service</Link>
+            <Link href="#" className="cursor-pointer hover:text-white transition-colors">Privacy Policy</Link>
+            <Link href="#" className="cursor-pointer hover:text-white transition-colors">Terms of Service</Link>
           </div>
         </div>
       </div>

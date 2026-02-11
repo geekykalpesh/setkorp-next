@@ -13,8 +13,8 @@ export default function robots(): MetadataRoute.Robots {
       }
     ],
     sitemap: [
-      'https://setkorp.ae/sitemap.xml',
-      'https://setkorp.ae/sitemap.txt'
+      'https://www.setkorp.com/sitemap.xml',
+      'https://www.setkorp.com/sitemap.txt'
     ],
   }
 }

@@ -1,4 +1,4 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Calculator } from "lucide-react";
 import Link from "next/link";
 import { Reveal } from "./Reveal";
 
@@ -45,7 +45,7 @@ export const Hero = () => {
                 aria-label="Open setup cost calculator"
               >
                 <span className="flex items-center">
-                  <div className="w-2 h-2 bg-brand rounded-full mr-2 animate-pulse"></div>
+                  <Calculator className="w-5 h-5 mr-2 text-brand" />
                   Setup Cost Calculator
                 </span>
               </Link>

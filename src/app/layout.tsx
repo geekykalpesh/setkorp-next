@@ -13,7 +13,7 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://setkorp.ae"),
+  metadataBase: new URL("https://www.setkorp.com"),
   title: "Dubai Business Setup | Setkorp - #1 Freezone & Mainland Incorporation",
   description: "Launch your Dubai business in 14 days with Setkorp. Expert business incorporation, corporate banking, real estate & accounting for freezone and mainland setups in the UAE.",
   keywords: ["Dubai Business Setup", "Company Incorporation Dubai", "UAE Freezone License", "Mainland Business Setup Dubai", "Corporate Banking UAE", "Setkorp Business Consultancy"],
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Dubai Business Setup | Setkorp - #1 Freezone & Mainland Incorporation",
     description: "Launch your Dubai business in 14 days with Setkorp. Expert business incorporation, corporate banking, real estate & accounting.",
-    url: "https://setkorp.ae",
+    url: "https://www.setkorp.com",
     siteName: "Setkorp",
     images: [
       {
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     images: ["/og-image.jpg"],
   },
   alternates: {
-    canonical: "https://setkorp.ae",
+    canonical: "https://www.setkorp.com",
   },
   robots: {
     index: true,
@@ -78,9 +78,9 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "ProfessionalService",
               "name": "Setkorp Business Consultancy",
-              "image": "https://setkorp.ae/og-image.jpg",
-              "@id": "https://setkorp.ae",
-              "url": "https://setkorp.ae",
+              "image": "https://www.setkorp.com/og-image.jpg",
+              "@id": "https://www.setkorp.com",
+              "url": "https://www.setkorp.com",
               "telephone": "+97140000000",
               "address": {
                 "@type": "PostalAddress",

@@ -1,4 +1,4 @@
-import { Calculator, BookOpen } from "lucide-react";
+import { Calculator, BookOpen, ArrowRight, Download } from "lucide-react";
 import Link from "next/link";
 
 export const Resources = () => {
@@ -25,7 +25,8 @@ export const Resources = () => {
                 </div>
                 <h3 className="text-xl font-bold mb-2 text-primary font-display">Dubai Setup Cost Calculator</h3>
                 <p className="text-slate-500 text-sm mb-6 leading-relaxed">Get an instant, itemized estimate based on your specific visa and office requirements.</p>
-                <Link href="#contact" className="bg-brand text-white px-6 py-4 rounded-lg font-bold hover:bg-brandhover transition-all inline-block shadow-lg shadow-brand/20">
+                <Link href="#contact" className="cursor-pointer bg-brand text-white px-6 py-4 rounded-lg font-bold hover:bg-brandhover transition-all flex items-center justify-center gap-2 shadow-lg shadow-brand/20">
+                  <Calculator className="w-5 h-5" />
                   Use Calculator
                 </Link>
               </div>
@@ -35,7 +36,8 @@ export const Resources = () => {
                 </div>
                 <h3 className="text-xl font-bold mb-2 text-primary font-display">2024 Incorporation Guide</h3>
                 <p className="text-slate-500 text-sm mb-6 leading-relaxed">A 40-page blueprint covering tax policy, visa laws, and freezone comparisons.</p>
-                <Link href="#contact" className="bg-brand text-white px-6 py-4 rounded-lg font-bold hover:bg-brandhover transition-all inline-block shadow-lg shadow-brand/20">
+                <Link href="#contact" className="cursor-pointer bg-brand text-white px-6 py-4 rounded-lg font-bold hover:bg-brandhover transition-all flex items-center justify-center gap-2 shadow-lg shadow-brand/20">
+                  <Download className="w-5 h-5" />
                   Download PDF
                 </Link>
               </div>

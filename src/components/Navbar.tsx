@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Menu, X, ArrowRight, Linkedin, Twitter } from "lucide-react";
+import { Menu, X, ArrowRight, PhoneCall, Linkedin, Twitter, Instagram, Facebook } from "lucide-react";
 import Link from "next/link";
 
 export const Navbar = () => {
@@ -48,7 +48,8 @@ export const Navbar = () => {
 
         {/* Actions Group */}
         <div className="flex-1 flex items-center justify-end gap-4">
-          <Link href="#contact" className="hidden sm:flex cursor-pointer bg-gradient-to-r from-brand to-brandhover text-white px-6 py-2.5 rounded-lg text-sm font-semibold hover:shadow-xl transition-all duration-200 shadow-lg shadow-brand/20 focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2">
+          <Link href="#contact" className="hidden sm:flex items-center gap-2 cursor-pointer bg-gradient-to-r from-brand to-brandhover text-white px-6 py-2.5 rounded-lg text-sm font-semibold hover:shadow-xl transition-all duration-200 shadow-lg shadow-brand/20 focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2">
+            <PhoneCall className="w-4 h-4" />
             Book Strategy Call
           </Link>
           {/* Mobile Menu Button */}
@@ -81,10 +82,20 @@ export const Navbar = () => {
         </div>
 
         <div className="mt-auto pt-8">
-          <Link href="#contact" onClick={() => setIsMenuOpen(false)} className="w-full inline-block text-center bg-brand text-white py-4 rounded-xl font-bold shadow-lg shadow-brand/20">Book Call</Link>
+          <Link href="#contact" onClick={() => setIsMenuOpen(false)} className="w-full flex items-center justify-center gap-2 bg-brand text-white py-4 rounded-xl font-bold shadow-lg shadow-brand/20">
+            <PhoneCall className="w-5 h-5" />
+            Book Call
+          </Link>
           <div className="mt-6 flex justify-center gap-6">
-            <Linkedin className="w-5 h-5 text-slate-400" />
-            <Twitter className="w-5 h-5 text-slate-400" />
+            <Link href="http://linkedin.com/company/setkorp/about/" target="_blank" className="text-slate-400 hover:text-brand transition-colors">
+              <Linkedin className="w-6 h-6" />
+            </Link>
+            <Link href="https://www.instagram.com/setkorp.dubai/" target="_blank" className="text-slate-400 hover:text-brand transition-colors">
+              <Instagram className="w-6 h-6" />
+            </Link>
+            <Link href="https://www.facebook.com/people/Setkorp/100069013263499/" target="_blank" className="text-slate-400 hover:text-brand transition-colors">
+              <Facebook className="w-6 h-6" />
+            </Link>
           </div>
         </div>
       </div>

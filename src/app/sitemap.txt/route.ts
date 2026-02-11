@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server';
 
 export async function GET() {
   const urls = [
-    'https://setkorp.ae/',
+    'https://www.setkorp.com/',
     // Add other URLs here as they are created
   ];
 

@@ -1,6 +1,6 @@
 "use client";
 
-import { Check, ChevronDown } from "lucide-react";
+import { Check, ChevronDown, Send } from "lucide-react";
 
 export const Contact = () => {
   return (
@@ -37,8 +37,8 @@ export const Contact = () => {
             
             <div className="mt-12 md:mt-20 pt-12 md:pt-16 border-t border-slate-200">
               <p className="text-xs uppercase tracking-[0.2em] text-brand font-bold mb-4">Urgent Inquiry?</p>
-              <a href="tel:+97140000000" className="text-2xl md:text-4xl font-black text-primary hover:text-brand transition-colors font-display">
-                +971 4 XXX XXXX
+              <a href="tel:+971561166524" className="cursor-pointer text-2xl md:text-4xl font-black text-primary hover:text-brand transition-colors font-display">
+                +971 56 116 6524
               </a>
             </div>
           </div>
@@ -87,9 +87,10 @@ export const Contact = () => {
               </div>
               <button 
                 type="submit" 
-                className="w-full bg-gradient-to-r from-brand to-brandhover text-white py-5 rounded-xl font-black text-lg hover:shadow-2xl transition-all shadow-xl shadow-brand/30 uppercase tracking-widest font-display"
+                className="cursor-pointer w-full bg-gradient-to-r from-brand to-brandhover text-white py-5 rounded-xl font-black text-lg hover:shadow-2xl transition-all shadow-xl shadow-brand/30 uppercase tracking-widest font-display flex items-center justify-center gap-3"
               >
                 Send My Request
+                <Send className="w-5 h-5 flex-shrink-0" />
               </button>
               <p className="text-center text-xs text-slate-400">By submitting, you agree to our privacy policy. We'll never spam you.</p>
             </form>

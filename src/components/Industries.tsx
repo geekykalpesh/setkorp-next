@@ -14,7 +14,7 @@ const industries = [
 
 export const Industries = () => {
   return (
-    <section id="industries" className="py-12 md:py-24 bg-surface">
+    <section id="industries" className="py-12 md:py-24 bg-surface m-4 md:m-8 lg:m-12">
       <div className="container mx-auto">
         <div className="max-w-6xl mx-auto">
           {/* Welcome Header */}
@@ -55,7 +55,7 @@ export const Industries = () => {
 
             {/* Right: Image */}
             <div className="relative">
-              <div className="aspect-square w-full rounded-lg bg-gradient-to-br from-slate-100 to-slate-200 border-2 border-slate-200 flex items-center justify-center overflow-hidden shadow-xl">
+              <div className="aspect-square w-full overflow-hidden shadow-2xl rounded-2xl">
                 <Image 
                   src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop" 
                   alt="Dubai Business District - Setkorp Incorporation Experts" 
@@ -64,7 +64,7 @@ export const Industries = () => {
                   priority={true}
                   className="object-cover w-full h-full opacity-80"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent"></div>
+                <div className="absolute rounded-2xl inset-0 bg-gradient-to-t from-primary/20 to-transparent"></div>
               </div>
             </div>
           </div>
