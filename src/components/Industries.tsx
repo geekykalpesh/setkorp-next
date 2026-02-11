@@ -1,38 +1,25 @@
-import { useRef } from "react";
-import StarIcon from "./ui/star-icon";
-import CameraIcon from "./ui/camera-icon";
-import RocketIcon from "./ui/rocket-icon";
-import CodeIcon from "./ui/code-icon";
-import PlugConnectedIcon from "./ui/plug-connected-icon";
-import GearIcon from "./ui/gear-icon";
-import UsersIcon from "./ui/users-icon";
-import SparklesIcon from "./ui/sparkles-icon";
+import { Briefcase, Megaphone, Zap, Code, TrendingUp, ClipboardCheck, Users, Calendar } from "lucide-react";
 import Image from "next/image";
-import type { AnimatedIconHandle } from "./ui/types";
 
 const industries = [
-  { icon: StarIcon, label: "Holding Companies" },
-  { icon: CameraIcon, label: "Media & Marketing" },
-  { icon: RocketIcon, label: "Energy Companies" },
-  { icon: CodeIcon, label: "Software & Tech" },
-  { icon: PlugConnectedIcon, label: "Trading Companies" },
-  { icon: GearIcon, label: "Project Management" },
-  { icon: UsersIcon, label: "Consulting Firms" },
-  { icon: SparklesIcon, label: "Event Management" },
+  { icon: Briefcase, label: "Holding Companies" },
+  { icon: Megaphone, label: "Media & Marketing" },
+  { icon: Zap, label: "Energy Companies" },
+  { icon: Code, label: "Software & Tech" },
+  { icon: TrendingUp, label: "Trading Companies" },
+  { icon: ClipboardCheck, label: "Project Management" },
+  { icon: Users, label: "Consulting Firms" },
+  { icon: Calendar, label: "Event Management" },
 ];
 
 const IndustryCard = ({ industry }: { industry: typeof industries[0] }) => {
-  const iconRef = useRef<AnimatedIconHandle>(null);
-
   return (
     <div 
-      onMouseEnter={() => iconRef.current?.startAnimation()}
-      onMouseLeave={() => iconRef.current?.stopAnimation()}
       className="group relative bg-surface p-4 rounded-xl border border-slate-200 hover:border-brand/40 transition-all duration-200 hover:shadow-lg hover:scale-105 cursor-pointer"
     >
       <div className="flex flex-col items-start gap-2">
         <div className="w-8 h-8 bg-brand/10 rounded-lg flex items-center justify-center group-hover:bg-brand/20 transition-colors duration-200">
-          <industry.icon ref={iconRef} className="w-4 h-4 text-brand" />
+          <industry.icon className="w-4 h-4 text-brand" />
         </div>
         <span className="text-sm md:text-base font-semibold text-primary">{industry.label}</span>
       </div>
