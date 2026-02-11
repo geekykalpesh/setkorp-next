@@ -1,7 +1,14 @@
-import { Linkedin, Twitter, MapPin, Mail, Instagram, Facebook, Phone } from "lucide-react";
+import { useRef } from "react";
+import { Linkedin, Twitter, MapPin, Instagram, Facebook } from "lucide-react";
 import Link from "next/link";
+import PhoneVolumeIcon from "./ui/phone-volume-icon";
+import MailFilledIcon from "./ui/mail-filled-icon";
+import type { AnimatedIconHandle } from "./ui/types";
 
 export const Footer = () => {
+  const phoneRef = useRef<AnimatedIconHandle>(null);
+  const mailRef = useRef<AnimatedIconHandle>(null);
+
   return (
     <footer className="bg-primary text-white py-12 md:py-24 px-6 border-t border-white/5">
       <div className="container mx-auto">
@@ -41,13 +48,21 @@ export const Footer = () => {
                 <MapPin className="w-5 h-5 text-brand shrink-0" />
                 <span>101, Building – A-2, Dubai Digital Park, Dubai, UAE</span>
               </li>
-              <li className="flex items-center gap-3">
-                <Mail className="w-5 h-5 text-brand shrink-0" />
-                <a href="mailto:saraansh@setkorp.com" className="cursor-pointer hover:text-brand transition-colors">saraansh@setkorp.com</a>
+              <li 
+                onMouseEnter={() => mailRef.current?.startAnimation()}
+                onMouseLeave={() => mailRef.current?.stopAnimation()}
+                className="flex items-center gap-3 group cursor-pointer"
+              >
+                <MailFilledIcon ref={mailRef} size={20} className="text-brand shrink-0" />
+                <a href="mailto:saraansh@setkorp.com" className="hover:text-brand transition-colors">saraansh@setkorp.com</a>
               </li>
-              <li className="flex items-center gap-3">
-                <Phone className="w-5 h-5 text-brand shrink-0" />
-                <a href="tel:+971561166524" className="cursor-pointer hover:text-brand transition-colors">+971 56 116 6524</a>
+              <li 
+                onMouseEnter={() => phoneRef.current?.startAnimation()}
+                onMouseLeave={() => phoneRef.current?.stopAnimation()}
+                className="flex items-center gap-3 group cursor-pointer"
+              >
+                <PhoneVolumeIcon ref={phoneRef} size={20} className="text-brand shrink-0" />
+                <a href="tel:+971561166524" className="hover:text-brand transition-colors">+971 56 116 6524</a>
               </li>
             </ul>
           </div>

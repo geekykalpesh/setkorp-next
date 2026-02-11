@@ -1,11 +1,15 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { Menu, X, ArrowRight, PhoneCall, Linkedin, Twitter, Instagram, Facebook } from "lucide-react";
+import { useState, useEffect, useRef } from "react";
+import { Menu, X, Linkedin, Instagram, Facebook } from "lucide-react";
 import Link from "next/link";
+import PhoneVolumeIcon from "./ui/phone-volume-icon";
+import type { AnimatedIconHandle } from "./ui/types";
 
 export const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const phoneRef = useRef<AnimatedIconHandle>(null);
+  const mobilePhoneRef = useRef<AnimatedIconHandle>(null);
 
   useEffect(() => {
     if (isMenuOpen) {
@@ -48,14 +52,18 @@ export const Navbar = () => {
 
         {/* Actions Group */}
         <div className="flex-1 flex items-center justify-end gap-4">
-          <Link href="#contact" className="hidden sm:flex items-center gap-2 cursor-pointer bg-gradient-to-r from-brand to-brandhover text-white px-6 py-2.5 rounded-lg text-sm font-semibold hover:shadow-xl transition-all duration-200 shadow-lg shadow-brand/20 focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2">
-            <PhoneCall className="w-4 h-4" />
+          <Link 
+            href="#contact" 
+            onClick={() => phoneRef.current?.startAnimation()}
+            className="hidden sm:flex items-center gap-2 cursor-pointer bg-gradient-to-r from-brand to-brandhover text-white px-6 py-2.5 rounded-lg text-sm font-semibold hover:shadow-xl transition-all duration-200 shadow-lg shadow-brand/20 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2"
+          >
+            <PhoneVolumeIcon ref={phoneRef} size={18} />
             Book Strategy Call
           </Link>
           {/* Mobile Menu Button */}
           <button 
             onClick={() => setIsMenuOpen(true)}
-            className="lg:hidden p-2 text-primary hover:text-brand transition-colors duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 rounded-lg" 
+            className="lg:hidden p-2 text-primary hover:text-brand transition-colors duration-200 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2 rounded-lg" 
             aria-label="Open menu"
           >
             <Menu className="w-6 h-6" />
@@ -82,8 +90,15 @@ export const Navbar = () => {
         </div>
 
         <div className="mt-auto pt-8">
-          <Link href="#contact" onClick={() => setIsMenuOpen(false)} className="w-full flex items-center justify-center gap-2 bg-brand text-white py-4 rounded-xl font-bold shadow-lg shadow-brand/20">
-            <PhoneCall className="w-5 h-5" />
+          <Link 
+            href="#contact" 
+            onClick={() => {
+              mobilePhoneRef.current?.startAnimation();
+              setTimeout(() => setIsMenuOpen(false), 300);
+            }} 
+            className="w-full flex items-center justify-center gap-2 bg-brand text-white py-4 rounded-xl font-bold shadow-lg shadow-brand/20"
+          >
+            <PhoneVolumeIcon ref={mobilePhoneRef} size={20} />
             Book Call
           </Link>
           <div className="mt-6 flex justify-center gap-6">

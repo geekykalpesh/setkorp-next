@@ -1,4 +1,6 @@
-import { ChevronDown } from "lucide-react";
+import { useRef } from "react";
+import DownChevron from "./ui/down-chevron";
+import type { AnimatedIconHandle } from "./ui/types";
 
 const faqs = [
   {
@@ -33,6 +35,28 @@ const faqs = [
   }
 ];
 
+const FAQItem = ({ faq }: { faq: typeof faqs[0] }) => {
+  const iconRef = useRef<AnimatedIconHandle>(null);
+
+  return (
+    <details 
+      onMouseEnter={() => iconRef.current?.startAnimation()}
+      onMouseLeave={() => iconRef.current?.stopAnimation()}
+      className="group bg-white rounded-lg border border-slate-100 p-6 [&_summary::-webkit-details-marker]:hidden cursor-pointer"
+    >
+      <summary className="flex items-center justify-between font-bold text-lg text-primary font-display">
+        <span>{faq.q}</span>
+        <span className="text-brand transition-transform group-open:rotate-180">
+          <DownChevron ref={iconRef} size={20} />
+        </span>
+      </summary>
+      <div className="mt-4 text-slate-600 leading-relaxed">
+        {faq.a}
+      </div>
+    </details>
+  );
+};
+
 export const FAQ = () => {
   return (
     <section id="faq" className="py-12 md:py-24 bg-slate-50">
@@ -45,17 +69,7 @@ export const FAQ = () => {
 
         <div className="max-w-3xl mx-auto space-y-4">
           {faqs.map((faq, i) => (
-            <details key={i} className="group bg-white rounded-lg border border-slate-100 p-6 [&_summary::-webkit-details-marker]:hidden cursor-pointer">
-              <summary className="flex items-center justify-between font-bold text-lg text-primary font-display">
-                <span>{faq.q}</span>
-                <span className="text-brand transition-transform group-open:rotate-180">
-                  <ChevronDown />
-                </span>
-              </summary>
-              <div className="mt-4 text-slate-600 leading-relaxed">
-                {faq.a}
-              </div>
-            </details>
+            <FAQItem key={i} faq={faq} />
           ))}
         </div>
       </div>

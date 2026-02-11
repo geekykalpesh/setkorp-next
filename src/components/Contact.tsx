@@ -1,8 +1,12 @@
 "use client";
 
-import { Check, ChevronDown, Send } from "lucide-react";
+import { useRef } from "react";
+import { Check, ChevronDown } from "lucide-react";
+import SendIcon from "./ui/send-icon";
+import type { AnimatedIconHandle } from "./ui/types";
 
 export const Contact = () => {
+  const sendRef = useRef<AnimatedIconHandle>(null);
   return (
     <section id="contact" className="py-12 md:py-24 bg-surface overflow-hidden relative">
       <div className="container mx-auto px-6">
@@ -87,10 +91,11 @@ export const Contact = () => {
               </div>
               <button 
                 type="submit" 
-                className="cursor-pointer w-full bg-gradient-to-r from-brand to-brandhover text-white py-5 rounded-xl font-black text-lg hover:shadow-2xl transition-all shadow-xl shadow-brand/30 uppercase tracking-widest font-display flex items-center justify-center gap-3"
+                onClick={() => sendRef.current?.startAnimation()}
+                className="cursor-pointer w-full bg-gradient-to-r from-brand to-brandhover text-white py-5 rounded-xl font-black text-lg hover:shadow-2xl transition-all shadow-xl shadow-brand/30 uppercase tracking-widest font-display flex items-center justify-center gap-3 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2"
               >
                 Send My Request
-                <Send className="w-5 h-5 flex-shrink-0" />
+                <SendIcon ref={sendRef} className="w-5 h-5 flex-shrink-0" />
               </button>
               <p className="text-center text-xs text-slate-400">By submitting, you agree to our privacy policy. We'll never spam you.</p>
             </form>

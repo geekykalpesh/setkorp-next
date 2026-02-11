@@ -1,6 +1,11 @@
-import { XCircle, AlertCircle, CheckCircle2, Check } from "lucide-react";
+import { useRef } from "react";
+import { XCircle, AlertCircle, Check } from "lucide-react";
+import CheckedIcon from "./ui/checked-icon";
+import type { AnimatedIconHandle } from "./ui/types";
 
 export const ProblemSolution = () => {
+  const checkRef = useRef<AnimatedIconHandle>(null);
+
   return (
     <section className="py-12 md:py-24 bg-slate-50">
       <div className="container mx-auto px-6 md:px-20">
@@ -38,10 +43,14 @@ export const ProblemSolution = () => {
           </div>
 
           {/* With Setkorp */}
-          <div className="bg-gradient-to-br from-red-50 to-orange-50 p-8 md:p-12 rounded-lg border-2 border-brand shadow-xl shadow-brand/10">
+          <div 
+            onMouseEnter={() => checkRef.current?.startAnimation()}
+            onMouseLeave={() => checkRef.current?.stopAnimation()}
+            className="bg-gradient-to-br from-red-50 to-orange-50 p-8 md:p-12 rounded-lg border-2 border-brand shadow-xl shadow-brand/10 cursor-pointer"
+          >
             <div className="flex items-center gap-3 mb-8">
               <div className="w-12 h-12 bg-brand text-white rounded-full flex items-center justify-center">
-                <CheckCircle2 />
+                <CheckedIcon ref={checkRef} color="white" size={24} />
               </div>
               <h3 className="text-2xl font-bold text-primary font-display">With Setkorp</h3>
             </div>

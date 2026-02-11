@@ -1,7 +1,15 @@
-import { Calculator, BookOpen, ArrowRight, Download } from "lucide-react";
+import { useRef } from "react";
 import Link from "next/link";
+import GearIcon from "./ui/gear-icon";
+import SparklesIcon from "./ui/sparkles-icon";
+import CalculatorIcon from "./ui/calculator-icon";
+import type { AnimatedIconHandle } from "./ui/types";
 
 export const Resources = () => {
+  const gearRef1 = useRef<AnimatedIconHandle>(null);
+  const gearRef2 = useRef<AnimatedIconHandle>(null);
+  const sparklesRef1 = useRef<AnimatedIconHandle>(null);
+  const sparklesRef2 = useRef<AnimatedIconHandle>(null);
   return (
     <section id="calculator" className="py-12 md:py-24 bg-surface relative overflow-hidden">
       <div className="container mx-auto px-6">
@@ -19,25 +27,49 @@ export const Resources = () => {
             </p>
             
             <div className="grid sm:grid-cols-2 gap-6 md:gap-8">
-              <div className="bg-white p-8 rounded-lg border border-slate-100 shadow-xl shadow-slate-200/50">
+              <div 
+                className="bg-white p-8 rounded-lg border border-slate-100 shadow-xl shadow-slate-200/50 cursor-pointer"
+                onMouseEnter={() => {
+                  gearRef1.current?.startAnimation();
+                }}
+                onMouseLeave={() => {
+                  gearRef1.current?.stopAnimation();
+                }}
+              >
                 <div className="w-12 h-12 bg-brand/10 rounded-xl flex items-center justify-center mb-6">
-                  <Calculator className="w-6 h-6 text-brand" />
+                  <CalculatorIcon ref={gearRef1} className="w-6 h-6 text-brand" />
                 </div>
                 <h3 className="text-xl font-bold mb-2 text-primary font-display">Dubai Setup Cost Calculator</h3>
                 <p className="text-slate-500 text-sm mb-6 leading-relaxed">Get an instant, itemized estimate based on your specific visa and office requirements.</p>
-                <Link href="#contact" className="cursor-pointer bg-brand text-white px-6 py-4 rounded-lg font-bold hover:bg-brandhover transition-all flex items-center justify-center gap-2 shadow-lg shadow-brand/20">
-                  <Calculator className="w-5 h-5" />
+                <Link 
+                  href="#contact" 
+                  onClick={() => gearRef2.current?.startAnimation()}
+                  className="cursor-pointer bg-brand text-white px-6 py-4 rounded-lg font-bold hover:bg-brandhover transition-all flex items-center justify-center gap-2 shadow-lg shadow-brand/20 group focus:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2"
+                >
+                  <CalculatorIcon ref={gearRef2} className="w-5 h-5" />
                   Use Calculator
                 </Link>
               </div>
-              <div className="bg-white p-8 rounded-lg border border-slate-100 shadow-xl shadow-slate-200/50">
+              <div 
+                className="bg-white p-8 rounded-lg border border-slate-100 shadow-xl shadow-slate-200/50 cursor-pointer"
+                onMouseEnter={() => {
+                  sparklesRef1.current?.startAnimation();
+                }}
+                onMouseLeave={() => {
+                  sparklesRef1.current?.stopAnimation();
+                }}
+              >
                 <div className="w-12 h-12 bg-brand/10 rounded-xl flex items-center justify-center mb-6">
-                  <BookOpen className="w-6 h-6 text-brand" />
+                  <SparklesIcon ref={sparklesRef1} className="w-6 h-6 text-brand" />
                 </div>
                 <h3 className="text-xl font-bold mb-2 text-primary font-display">2024 Incorporation Guide</h3>
                 <p className="text-slate-500 text-sm mb-6 leading-relaxed">A 40-page blueprint covering tax policy, visa laws, and freezone comparisons.</p>
-                <Link href="#contact" className="cursor-pointer bg-brand text-white px-6 py-4 rounded-lg font-bold hover:bg-brandhover transition-all flex items-center justify-center gap-2 shadow-lg shadow-brand/20">
-                  <Download className="w-5 h-5" />
+                <Link 
+                  href="#contact" 
+                  onClick={() => sparklesRef2.current?.startAnimation()}
+                  className="cursor-pointer bg-brand text-white px-6 py-4 rounded-lg font-bold hover:bg-brandhover transition-all flex items-center justify-center gap-2 shadow-lg shadow-brand/20 group focus:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2"
+                >
+                  <SparklesIcon ref={sparklesRef2} className="w-5 h-5 flex-shrink-0" />
                   Download PDF
                 </Link>
               </div>

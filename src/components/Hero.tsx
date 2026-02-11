@@ -1,8 +1,14 @@
-import { ArrowRight, Calculator } from "lucide-react";
+import { useRef } from "react";
 import Link from "next/link";
 import { Reveal } from "./Reveal";
+import PhoneVolumeIcon from "./ui/phone-volume-icon";
+import CalculatorIcon from "./ui/calculator-icon";
+import type { AnimatedIconHandle } from "./ui/types";
 
 export const Hero = () => {
+  const phoneRef = useRef<AnimatedIconHandle>(null);
+  const calcRef = useRef<AnimatedIconHandle>(null);
+
   return (
     <section className="relative h-[85vh] md:h-screen overflow-hidden md:-mt-20">
       {/* Video Background */}
@@ -29,23 +35,25 @@ export const Hero = () => {
               {/* Primary CTA */}
               <Link 
                 href="#contact" 
-                className="group w-full sm:w-auto cursor-pointer bg-gradient-to-r from-brand to-brandhover text-white px-6 md:px-10 py-4 md:py-5 rounded-xl text-sm md:text-lg font-black transition-all duration-200 shadow-[0_20px_40px_-12px_rgba(227,88,77,0.4)] hover:shadow-[0_30px_60px_-12px_rgba(227,88,77,0.5)] hover:-translate-y-1 ring-1 ring-white/20 ring-inset flex items-center justify-center relative overflow-hidden focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2" 
+                onClick={() => phoneRef.current?.startAnimation()}
+                className="group w-full sm:w-auto cursor-pointer bg-gradient-to-r from-brand to-brandhover text-white px-6 md:px-10 py-4 md:py-5 rounded-lg text-sm md:text-lg font-black transition-all duration-200 shadow-[0_20px_40px_-12px_rgba(227,88,77,0.4)] hover:shadow-[0_30px_60px_-12px_rgba(227,88,77,0.5)] hover:-translate-y-1 ring-1 ring-white/20 ring-inset flex items-center justify-center relative overflow-hidden focus:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2" 
                 aria-label="Book your free strategy call"
               >
                 <span className="relative z-10 flex items-center">
                   Book Your Free Strategy Call
-                  <ArrowRight className="w-4 h-4 md:w-5 md:h-5 ml-2 transition-transform duration-200 group-hover:translate-x-1" />
+                  <PhoneVolumeIcon ref={phoneRef} size={20} className="ml-2" />
                 </span>
               </Link>
               
               {/* Secondary CTA */}
               <Link 
                 href="#calculator" 
-                className="group w-full sm:w-auto cursor-pointer bg-white/95 backdrop-blur-md text-primary border border-slate-200 px-6 md:px-10 py-4 md:py-5 rounded-xl text-sm md:text-lg font-bold hover:bg-white hover:-translate-y-1 transition-all duration-200 flex items-center justify-center shadow-lg focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2" 
+                onClick={() => calcRef.current?.startAnimation()}
+                className="group w-full sm:w-auto cursor-pointer bg-white/95 backdrop-blur-md text-primary border border-slate-200 px-6 md:px-10 py-4 md:py-5 rounded-lg text-sm md:text-lg font-bold hover:bg-white hover:-translate-y-1 transition-all duration-200 flex items-center justify-center shadow-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2" 
                 aria-label="Open setup cost calculator"
               >
                 <span className="flex items-center">
-                  <Calculator className="w-5 h-5 mr-2 text-brand" />
+                  <CalculatorIcon ref={calcRef} size={20} className="mr-2 text-brand" />
                   Setup Cost Calculator
                 </span>
               </Link>

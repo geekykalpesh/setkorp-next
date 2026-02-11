@@ -1,4 +1,4 @@
-import { Building2, Landmark, Building, Calculator, CheckCircle, ShieldCheck, CreditCard, Globe, MapPin, Key, FileCheck } from "lucide-react";
+import { Building2, Landmark, Building, Calculator, CheckCircle, ShieldCheck, CreditCard, Globe, MapPin, Key, FileCheck, Layout, PieChart, Lock, Search, Rocket, Zap, Handshake, Coins, Compass, Navigation, FileText } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const services = [
@@ -60,7 +60,7 @@ const services = [
     graphicIcon: Calculator,
     graphicTitle: "Financial Services",
     graphicSub: "Compliance & Expert Advisory",
-    graphicTags: [{ icon: FileCheck, label: "Filing" }, { icon: ShieldCheck, label: "Secure" }]
+    graphicTags: [{ icon: FileCheck, label: "Filing" }, { icon: Lock, label: "Secure" }]
   }
 ];
 
