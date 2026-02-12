@@ -106,7 +106,7 @@ export const Services = () => {
       <div className="relative space-y-4 md:space-y-0">
         {services.map((service, index) => (
           <div key={index} className="sticky top-12 md:top-20 h-auto md:h-[90vh] container mx-auto px-4 md:px-20 flex items-center justify-center" style={{ zIndex: index + 1 }}>
-            <div className="w-full max-w-7xl md:h-[70vh] bg-white border border-slate-200/40 rounded-xl overflow-hidden grid md:grid-cols-2 shadow-sm hover:shadow-md transition-all duration-500">
+            <div className="w-full max-w-7xl md:h-[70vh] bg-white border border-slate-200 rounded-xl overflow-hidden grid md:grid-cols-2 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_40px_rgb(0,0,0,0.08)] transition-all duration-500">
               {/* LEFT SIDE: CONTENT */}
               <div className={cn("p-8 md:p-16 flex flex-col justify-center border-b md:border-b-0 md:border-r border-slate-100 relative bg-gradient-to-br to-transparent", service.bgColor)}>
                 <div className="relative z-10">
