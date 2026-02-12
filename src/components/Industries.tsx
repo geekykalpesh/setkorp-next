@@ -16,7 +16,7 @@ const industries = [
 const IndustryCard = ({ industry }: { industry: typeof industries[0] }) => {
   return (
     <CardSpotlight
-      className="group relative bg-gradient-to-br from-slate-50 to-white p-5 rounded-xl border-slate-200 hover:border-brand/50 transition-all duration-300 hover:shadow-xl cursor-pointer overflow-hidden h-24"
+      className="group relative bg-gradient-to-br from-slate-50 to-white p-4 md:p-5 rounded-xl border-slate-200 hover:border-brand/50 transition-all duration-300 hover:shadow-xl cursor-pointer overflow-hidden min-h-[7.5rem] md:min-h-[8rem] h-auto"
       dotColors={[[227, 88, 77]]} // Brand color for the spotlight effect
     >
       {/* Content */}
