@@ -106,7 +106,7 @@ export const Services = () => {
       <div className="relative space-y-4 md:space-y-0">
         {services.map((service, index) => (
           <div key={index} className="sticky top-12 md:top-20 h-auto md:h-[90vh] container mx-auto px-4 md:px-20 flex items-center justify-center" style={{ zIndex: index + 1 }}>
-            <div className="w-full max-w-7xl md:h-[70vh] bg-white border-2 border-slate-300 rounded-2xl md:rounded-3xl overflow-hidden grid md:grid-cols-2 shadow-2xl hover:shadow-[0_25px_50px_-12px_rgba(0,0,0,0.35)] transition-shadow duration-300 ring-1 ring-slate-200/50">
+            <div className="w-full max-w-7xl md:h-[70vh] bg-white border-2 border-slate-300 rounded-lg overflow-hidden grid md:grid-cols-2 shadow-2xl hover:shadow-[0_25px_50px_-12px_rgba(0,0,0,0.35)] transition-shadow duration-300 ring-1 ring-slate-200/50">
               {/* LEFT SIDE: CONTENT */}
               <div className={cn("p-8 md:p-16 flex flex-col justify-center border-b md:border-b-0 md:border-r border-slate-100 relative bg-gradient-to-br to-transparent", service.bgColor)}>
                 <div className="relative z-10">
@@ -142,7 +142,7 @@ export const Services = () => {
               </div>
 
               {/* RIGHT SIDE: GRAPHIC */}
-              <div className={cn("p-8 md:p-10 flex items-center justify-center relative overflow-hidden hidden sm:flex bg-gradient-to-br to-slate-50", service.graphicBg)}>
+              <div className={cn("p-8 md:p-10 flex items-center justify-center relative overflow-hidden bg-gradient-to-br to-slate-50", service.graphicBg)}>
                 <div className="w-full h-full flex items-center justify-center">
                   <div className={cn("relative w-full h-full max-w-lg bg-white rounded-3xl shadow-[0_20px_60px_-15px_rgba(0,0,0,0.4)] hover:shadow-[0_30px_80px_-15px_rgba(0,0,0,0.5)] overflow-hidden flex flex-col items-center justify-center border-2 transition-all duration-500 hover:scale-[1.02] ring-2 ring-offset-4", 
                     service.color === 'brand' ? 'border-brand/30 ring-brand/20' :
@@ -159,8 +159,8 @@ export const Services = () => {
                         className="object-cover opacity-100"
                         sizes="(max-width: 768px) 100vw, 50vw"
                       />
-                      {/* Black gradient overlay for dramatic effect */}
-                      <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/40"></div>
+                      {/* Simple dark overlay */}
+                      <div className="absolute inset-0 bg-gradient-to-br from-black/75 via-black/70 to-black/65"></div>
                     </div>
 
                     <div className="relative z-10 p-8 flex flex-col items-center w-full">
