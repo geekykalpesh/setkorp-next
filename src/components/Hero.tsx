@@ -10,7 +10,7 @@ export const Hero = () => {
   const calcRef = useRef<AnimatedIconHandle>(null);
 
   return (
-    <section className="relative h-[85vh] md:h-screen overflow-hidden md:-mt-20" style={{ backgroundColor: "#FDFDFD" }}>
+    <section className="relative h-[85vh] md:h-screen overflow-hidden md:-mt-20 hero-mobile-section" style={{ backgroundColor: "#FDFDFD" }}>
       {/* Video Background */}
       <div className="absolute inset-0 flex items-center justify-center md:block">
         <video 
@@ -19,7 +19,7 @@ export const Hero = () => {
           loop 
           playsInline 
           preload="metadata"
-          className="w-full h-auto max-h-[60vh] md:h-full md:max-h-none object-contain scale-[1.15] md:scale-100" 
+          className="w-full h-auto max-h-[60vh] md:h-full md:max-h-none object-contain scale-[1.15] md:scale-100 hero-mobile-video" 
           style={{ backgroundColor: "#FDFDFD" }}
         >
           <source src="/hero-section-video.mp4" type="video/mp4" />
@@ -28,7 +28,7 @@ export const Hero = () => {
       </div>
       
       {/* Content Container - Buttons Only */}
-      <div className="relative h-full flex items-end justify-center pb-8 md:pb-8">
+      <div className="relative h-full flex items-end justify-center pb-8 md:pb-8 hero-mobile-content">
         <div className="container mx-auto px-4">
           <Reveal>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 md:gap-6">

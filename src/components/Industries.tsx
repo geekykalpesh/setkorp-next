@@ -36,7 +36,7 @@ export const Industries = () => {
       <div className="container mx-auto">
         <div className="max-w-6xl mx-auto">
           {/* Welcome Header */}
-          <div className="mb-12 md:mb-20 text-center md:text-left">
+          <div className="mb-12 md:mb-20 text-center md:text-left hidden md:block">
             <h2 className="text-3xl md:text-5xl font-extrabold text-primary mb-6">
               Welcome to <span className="text-brand">Setkorp</span>
             </h2>

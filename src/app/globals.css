@@ -183,3 +183,19 @@
     cursor: pointer;
   }
 }
+
+/* Custom Hero adjustments for small mobile screens (< 433px) */
+@media (max-width: 433px) {
+  .hero-mobile-section {
+    height: 90vh !important;
+    min-height: 520px !important;
+  }
+
+  .hero-mobile-video {
+    transform: translateY(-50px) scale(1.15) !important;
+  }
+  
+  .hero-mobile-content {
+    padding-bottom: 60px !important;
+  }
+}
