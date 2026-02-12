@@ -20,7 +20,7 @@ const Contact = dynamic(() => import("@/components/Contact").then(mod => mod.Con
 
 export default function Home() {
   return (
-    <div className="max-w-[1280px] mx-auto bg-surface relative min-h-screen">
+    <div className="relative min-h-screen">
       <Navbar />
       <main>
         <Hero />

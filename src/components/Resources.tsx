@@ -11,9 +11,9 @@ export const Resources = () => {
   const sparklesRef1 = useRef<AnimatedIconHandle>(null);
   const sparklesRef2 = useRef<AnimatedIconHandle>(null);
   return (
-    <section id="calculator" className="py-12 md:py-24 bg-surface relative overflow-hidden">
+    <section id="calculator" className="py-12 md:py-24 relative overflow-hidden" style={{ backgroundColor: "#F8FAFC" }}>
       <div className="container mx-auto px-6">
-        <div className="bg-slate-50 rounded-2xl md:rounded-lg p-8 md:p-12 lg:p-20 text-slate-900 flex flex-col lg:flex-row items-center gap-12 md:gap-20 border border-slate-100 shadow-sm">
+        <div className="bg-slate-50 rounded-2xl md:rounded-lg p-8 md:p-12 lg:p-20 text-slate-900 flex flex-col lg:flex-row items-center gap-12 md:gap-20 shadow-sm">
           <div className="lg:w-2/3">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand/10 text-brand text-xs font-bold mb-6">
               <span className="w-1 h-1 rounded-full bg-brand"></span>
@@ -28,7 +28,7 @@ export const Resources = () => {
             
             <div className="grid sm:grid-cols-2 gap-6 md:gap-8">
               <div 
-                className="bg-white p-8 rounded-lg border border-slate-100 shadow-xl shadow-slate-200/50 cursor-pointer"
+                className="bg-white p-8 rounded-lg shadow-xl shadow-slate-200/50 cursor-pointer ring-0"
                 onMouseEnter={() => {
                   gearRef1.current?.startAnimation();
                 }}
@@ -51,7 +51,7 @@ export const Resources = () => {
                 </Link>
               </div>
               <div 
-                className="bg-white p-8 rounded-lg border border-slate-100 shadow-xl shadow-slate-200/50 cursor-pointer"
+                className="bg-white p-8 rounded-lg shadow-xl shadow-slate-200/50 cursor-pointer ring-0"
                 onMouseEnter={() => {
                   sparklesRef1.current?.startAnimation();
                 }}
@@ -77,7 +77,7 @@ export const Resources = () => {
           </div>
           <div className="lg:w-1/3 flex justify-center">
             <div className="relative">
-              <div className="w-48 h-64 bg-white rounded-lg shadow-2xl flex items-center justify-center p-6 text-primary overflow-hidden border border-slate-100">
+              <div className="w-48 h-64 bg-white rounded-lg shadow-2xl flex items-center justify-center p-6 text-primary overflow-hidden ring-0">
                 <div className="absolute top-0 right-0 w-16 h-16 bg-brand opacity-10 rounded-bl-full"></div>
                 <div className="text-center">
                   <div className="font-bold text-xs uppercase tracking-widest text-brand mb-2">Setkorp</div>

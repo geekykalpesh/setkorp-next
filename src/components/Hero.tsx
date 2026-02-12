@@ -10,7 +10,7 @@ export const Hero = () => {
   const calcRef = useRef<AnimatedIconHandle>(null);
 
   return (
-    <section className="relative h-[85vh] md:h-screen overflow-hidden md:-mt-20">
+    <section className="relative h-[85vh] md:h-screen overflow-hidden md:-mt-20" style={{ backgroundColor: "#FDFDFD" }}>
       {/* Video Background */}
       <div className="absolute inset-0 flex items-center justify-center md:block">
         <video 
