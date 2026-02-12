@@ -20,53 +20,86 @@ export const ProblemSolution = () => {
         
         <div className="grid lg:grid-cols-2 gap-8 md:gap-12 group">
           {/* Without Setkorp */}
-          <div className="bg-white p-8 md:p-12 rounded-lg border border-red-100">
+          <div className="p-8 md:p-12 rounded-lg border border-red-100" style={{ backgroundColor: '#FCFCFC' }}>
             <div className="flex items-center gap-3 mb-8">
-              <div className="w-12 h-12 bg-red-100 text-red-600 rounded-full flex items-center justify-center">
-                <XCircle />
-              </div>
-              <h3 className="text-2xl font-bold text-red-900 font-display">Without Setkorp</h3>
+              <h3 className="text-2xl font-bold text-black font-display">Without Setkorp</h3>
             </div>
-            <ul className="space-y-4">
-              {[
-                "Confused by 40+ freezone options and complex regulations",
-                "Spending weeks chasing bank account approvals",
-                "Overpaying for services you don't need",
-                "Missing critical compliance deadlines"
-              ].map((item, i) => (
-                <li key={i} className="flex items-start gap-3 text-slate-600">
-                  <AlertCircle className="w-5 h-5 text-red-400 mt-1 flex-shrink-0" />
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
+            
+            {/* Two Column Layout: Video Left, Content Right */}
+            <div className="grid md:grid-cols-2 gap-6 items-center">
+              {/* Left: Video */}
+              <div className="rounded-lg overflow-hidden">
+                <video 
+                  autoPlay 
+                  loop 
+                  muted 
+                  playsInline
+                  className="w-full h-full object-cover rounded-lg"
+                >
+                  <source src="/unsorted.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              
+              {/* Right: Content */}
+              <ul className="space-y-4">
+                {[
+                  "Confused by 40+ freezone options and complex regulations",
+                  "Spending weeks chasing bank account approvals",
+                  "Overpaying for services you don't need",
+                  "Missing critical compliance deadlines"
+                ].map((item, i) => (
+                  <li key={i} className="flex items-start gap-3 text-slate-600">
+                    <AlertCircle className="w-5 h-5 text-red-400 mt-1 flex-shrink-0" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
 
           {/* With Setkorp */}
           <div 
             onMouseEnter={() => checkRef.current?.startAnimation()}
             onMouseLeave={() => checkRef.current?.stopAnimation()}
-            className="bg-gradient-to-br from-red-50 to-orange-50 p-8 md:p-12 rounded-lg border-2 border-brand shadow-xl shadow-brand/10 cursor-pointer"
+            className="p-8 md:p-12 rounded-lg border-2 border-brand shadow-xl shadow-brand/10 cursor-pointer"
+            style={{ backgroundColor: '#FCFCFC' }}
           >
             <div className="flex items-center gap-3 mb-8">
-              <div className="w-12 h-12 bg-brand text-white rounded-full flex items-center justify-center">
-                <CheckedIcon ref={checkRef} color="white" size={24} />
-              </div>
-              <h3 className="text-2xl font-bold text-primary font-display">With Setkorp</h3>
+              <h3 className="text-2xl font-bold text-primary font-display">With <span className="text-brand">Setkorp</span></h3>
             </div>
-            <ul className="space-y-4">
-              {[
-                "Clear roadmap: We match you to the perfect freezone or mainland structure",
-                "Banking relationships secured within 7 business days",
-                "Transparent, all-inclusive pricing—no hidden fees",
-                "Compliance calendar and dedicated account manager"
-              ].map((item, i) => (
-                <li key={i} className="flex items-start gap-3 text-slate-700 font-medium">
-                  <Check className="w-5 h-5 text-brand mt-1 flex-shrink-0" />
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
+            
+            {/* Two Column Layout: Video Left, Content Right */}
+            <div className="grid md:grid-cols-2 gap-6 items-center">
+              {/* Left: Video */}
+              <div className="rounded-lg overflow-hidden">
+                <video 
+                  autoPlay 
+                  loop 
+                  muted 
+                  playsInline
+                  className="w-full h-full object-cover rounded-lg"
+                >
+                  <source src="/sorted.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              
+              {/* Right: Content */}
+              <ul className="space-y-4">
+                {[
+                  "Clear roadmap: We match you to the perfect freezone or mainland structure",
+                  "Banking relationships secured within 7 business days",
+                  "Transparent, all-inclusive pricing—no hidden fees",
+                  "Compliance calendar and dedicated account manager"
+                ].map((item, i) => (
+                  <li key={i} className="flex items-start gap-3 text-slate-700 font-medium">
+                    <Check className="w-5 h-5 text-success mt-1 flex-shrink-0" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
       </div>

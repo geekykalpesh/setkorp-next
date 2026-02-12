@@ -31,17 +31,15 @@ export const Process = () => {
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {/* Card 1: Discovery Call */}
           <CardSpotlight
-            onMouseEnter={() => phoneRef.current?.startAnimation()}
-            onMouseLeave={() => phoneRef.current?.stopAnimation()}
-            className="group relative bg-gradient-to-br from-slate-50 to-white p-8 rounded-lg border-slate-200 hover:border-brand/40 shadow-lg hover:shadow-2xl hover:shadow-brand/10 transition-all duration-500 cursor-pointer"
+            className="group relative overflow-visible bg-gradient-to-br from-slate-50 to-white p-8 rounded-lg border-slate-200 hover:border-brand/40 shadow-lg hover:shadow-2xl hover:shadow-brand/10 transition-all duration-500 cursor-pointer"
             dotColors={[[227, 88, 77]]} // Brand color
           >
-            <div className="absolute -top-4 -right-4 w-16 h-16 bg-brand rounded-2xl flex items-center justify-center shadow-lg shadow-brand/30 group-hover:shadow-brand/50 transition-all duration-500">
-              <span className="text-2xl font-bold text-white">1</span>
+            <div className="absolute -top-12 -right-12 w-12 h-12 bg-brand rounded-md flex items-center justify-center shadow-lg shadow-brand/30 group-hover:shadow-brand/50 transition-all duration-500 z-10">
+              <span className="text-lg font-bold text-white">1</span>
             </div>
             <div className="flex items-center gap-4 mb-6">
               <div className="w-16 h-16 bg-brand/10 group-hover:bg-brand/15 rounded-xl flex items-center justify-center shrink-0 transition-all duration-500">
-                <PhoneVolumeIcon ref={phoneRef} size={32} className="text-brand transition-all duration-500" />
+                <PhoneCall className="w-8 h-8 text-brand transition-all duration-500" />
               </div>
               <div>
                 <h3 className="text-xl font-bold text-primary font-display transition-all duration-500">Discovery Call</h3>
@@ -53,17 +51,15 @@ export const Process = () => {
 
           {/* Card 2: Documentation */}
           <CardSpotlight
-            onMouseEnter={() => docRef.current?.startAnimation()}
-            onMouseLeave={() => docRef.current?.stopAnimation()}
-            className="group relative bg-gradient-to-br from-slate-50 to-white p-8 rounded-lg border-slate-200 hover:border-gold/40 shadow-lg hover:shadow-2xl hover:shadow-gold/10 transition-all duration-500 cursor-pointer"
+            className="group relative overflow-visible bg-gradient-to-br from-slate-50 to-white p-8 rounded-lg border-slate-200 hover:border-gold/40 shadow-lg hover:shadow-2xl hover:shadow-gold/10 transition-all duration-500 cursor-pointer"
             dotColors={[[212, 175, 55]]} // Gold color
           >
-            <div className="absolute -top-4 -right-4 w-16 h-16 bg-gold rounded-2xl flex items-center justify-center shadow-lg shadow-gold/30 group-hover:shadow-gold/50 transition-all duration-500">
-              <span className="text-2xl font-bold text-white">2</span>
+            <div className="absolute -top-12 -right-12 w-12 h-12 bg-gold rounded-md flex items-center justify-center shadow-lg shadow-gold/30 group-hover:shadow-gold/50 transition-all duration-500 z-10">
+              <span className="text-lg font-bold text-white">2</span>
             </div>
             <div className="flex items-center gap-4 mb-6">
               <div className="w-16 h-16 bg-gold/10 group-hover:bg-gold/15 rounded-xl flex items-center justify-center shrink-0 transition-all duration-500">
-                <FileDescriptionIcon ref={docRef} size={32} color="#D4AF37" className="transition-all duration-500" />
+                <FileText className="w-8 h-8 text-gold transition-all duration-500" />
               </div>
               <div>
                 <h3 className="text-xl font-bold text-primary font-display transition-all duration-500">Documentation</h3>
@@ -75,11 +71,11 @@ export const Process = () => {
 
           {/* Card 3: Banking & Office */}
           <CardSpotlight
-            className="group relative bg-gradient-to-br from-slate-50 to-white p-8 rounded-lg border-slate-200 hover:border-success/40 shadow-lg hover:shadow-2xl hover:shadow-success/10 transition-all duration-500 cursor-pointer"
+            className="group relative overflow-visible bg-gradient-to-br from-slate-50 to-white p-8 rounded-lg border-slate-200 hover:border-success/40 shadow-lg hover:shadow-2xl hover:shadow-success/10 transition-all duration-500 cursor-pointer"
             dotColors={[[34, 197, 94]]} // Success/green color
           >
-            <div className="absolute -top-4 -right-4 w-16 h-16 bg-success rounded-2xl flex items-center justify-center shadow-lg shadow-success/30 group-hover:shadow-success/50 transition-all duration-500">
-              <span className="text-2xl font-bold text-white">3</span>
+            <div className="absolute -top-12 -right-12 w-12 h-12 bg-success rounded-md flex items-center justify-center shadow-lg shadow-success/30 group-hover:shadow-success/50 transition-all duration-500 z-10">
+              <span className="text-lg font-bold text-white">3</span>
             </div>
             <div className="flex items-center gap-4 mb-6">
               <div className="w-16 h-16 bg-success/10 group-hover:bg-success/15 rounded-xl flex items-center justify-center shrink-0 transition-all duration-500">
@@ -94,18 +90,24 @@ export const Process = () => {
           </CardSpotlight>
         </div>
 
-        {/* Ongoing Support Banner */}
-        <div className="mt-16 max-w-4xl mx-auto">
+        {/* Updated Ongoing Support Card */}
+        <div className="mt-8 max-w-6xl mx-auto">
           <div 
             onMouseEnter={() => shieldRef.current?.startAnimation()}
             onMouseLeave={() => shieldRef.current?.stopAnimation()}
-            className="bg-slate-50 rounded-lg p-8 md:p-12 text-slate-900 text-center border border-slate-100 shadow-sm cursor-pointer"
+            className="bg-white/60 backdrop-blur-sm rounded-lg p-8 md:p-12 text-center border border-slate-200/60 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_40px_rgb(0,0,0,0.08)] transition-all duration-300 cursor-pointer"
           >
-            <div className="flex items-center justify-center gap-3 mb-4">
-              <ShieldCheckIcon ref={shieldRef} size={32} className="text-brand" />
-              <h3 className="text-2xl md:text-3xl font-bold text-primary font-display">Ongoing <span className="text-brand">Support</span> (Year 1+)</h3>
+            <div className="flex flex-col items-center justify-center gap-6">
+              <div className="flex items-center justify-center gap-4">
+                <ShieldCheckIcon ref={shieldRef} size={40} className="text-brand" />
+                <h3 className="text-2xl md:text-4xl font-extrabold text-primary font-display">
+                  Ongoing <span className="text-brand">Support</span> (Year 1+)
+                </h3>
+              </div>
+              <p className="text-lg md:text-xl text-slate-600 max-w-none mx-auto leading-relaxed">
+                Compliance calendar, renewals, and growth advisory—we're your long-term prosperity partner in Dubai.
+              </p>
             </div>
-            <p className="text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">Compliance calendar, renewals, and growth advisory—we're your long-term prosperity partner in Dubai.</p>
           </div>
         </div>
       </div>

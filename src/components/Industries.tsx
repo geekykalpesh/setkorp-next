@@ -1,5 +1,6 @@
 import { Briefcase, Megaphone, Zap, Code, TrendingUp, ClipboardCheck, Users, Calendar } from "lucide-react";
 import Image from "next/image";
+import { CardSpotlight } from "./ui/card-spotlight";
 
 const industries = [
   { icon: Briefcase, label: "Holding Companies", image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400&h=300&fit=crop" },
@@ -14,30 +15,18 @@ const industries = [
 
 const IndustryCard = ({ industry }: { industry: typeof industries[0] }) => {
   return (
-    <div 
-      className="group relative bg-white p-5 rounded-xl border border-slate-200 hover:border-brand/50 transition-all duration-300 hover:shadow-xl cursor-pointer overflow-hidden h-32"
+    <CardSpotlight
+      className="group relative bg-gradient-to-br from-slate-50 to-white p-5 rounded-xl border-slate-200 hover:border-brand/50 transition-all duration-300 hover:shadow-xl cursor-pointer overflow-hidden h-24"
+      dotColors={[[227, 88, 77]]} // Brand color for the spotlight effect
     >
-      {/* Background Image */}
-      <div className="absolute inset-0 z-0">
-        <Image 
-          src={industry.image} 
-          alt={industry.label}
-          fill
-          className="object-cover transition-all duration-300 group-hover:scale-105"
-          sizes="(max-width: 768px) 50vw, 25vw"
-        />
-        {/* Simple dark overlay */}
-        <div className="absolute inset-0 bg-gradient-to-br from-black/75 via-black/70 to-black/65"></div>
-      </div>
-      
       {/* Content */}
       <div className="relative z-10 flex flex-col items-start gap-3 h-full justify-between">
-        <div className="w-9 h-9 bg-brand/20 backdrop-blur-sm rounded-lg flex items-center justify-center group-hover:bg-brand/30 transition-all duration-300 border border-brand/30">
-          <industry.icon className="w-5 h-5 text-white" />
+        <div className="w-9 h-9 bg-brand/10 rounded-lg flex items-center justify-center group-hover:bg-brand/20 transition-all duration-300">
+          <industry.icon className="w-5 h-5 text-brand" />
         </div>
-        <span className="text-sm md:text-base font-semibold text-white">{industry.label}</span>
+        <span className="text-sm md:text-base font-semibold text-primary">{industry.label}</span>
       </div>
-    </div>
+    </CardSpotlight>
   );
 };
 
