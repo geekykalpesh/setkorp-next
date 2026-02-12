@@ -22,7 +22,7 @@ export const ProblemSolution = () => {
           {/* Without Setkorp */}
           <div className="p-8 md:p-12 rounded-lg border border-red-100" style={{ backgroundColor: '#FCFCFC' }}>
             <div className="flex items-center gap-3 mb-8">
-              <h3 className="text-2xl font-bold text-black font-display">Without Setkorp</h3>
+              <h3 className="text-4xl font-bold text-black font-display">Without Setkorp</h3>
             </div>
             
             {/* Two Column Layout: Video Left, Content Right */}
@@ -66,7 +66,7 @@ export const ProblemSolution = () => {
             style={{ backgroundColor: '#FCFCFC' }}
           >
             <div className="flex items-center gap-3 mb-8">
-              <h3 className="text-2xl font-bold text-primary font-display">With <span className="text-brand">Setkorp</span></h3>
+              <h3 className="text-4xl font-bold text-primary font-display">With <span className="text-brand">Setkorp</span></h3>
             </div>
             
             {/* Two Column Layout: Video Left, Content Right */}
