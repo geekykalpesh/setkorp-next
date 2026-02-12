@@ -64,19 +64,18 @@ export const Industries = () => {
               </div>
             </div>
 
-            {/* Right: Image */}
-            <div className="relative">
-              <div className="aspect-square w-full overflow-hidden shadow-2xl rounded-2xl">
-                <Image 
-                  src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop" 
-                  alt="Dubai Business District - Setkorp Incorporation Experts" 
-                  width={600}
-                  height={600}
-                  priority={true}
-                  className="object-cover w-full h-full opacity-80"
-                />
-                <div className="absolute rounded-2xl inset-0 bg-gradient-to-t from-primary/20 to-transparent"></div>
-              </div>
+            {/* Right: Video */}
+            <div className="relative flex justify-center items-center h-full overflow-visible">
+              <video 
+                autoPlay 
+                loop 
+                muted 
+                playsInline
+                className="w-[105%] max-w-none h-auto rounded-3xl translate-x-3"
+              >
+                <source src="/doller.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
             </div>
           </div>
         </div>
