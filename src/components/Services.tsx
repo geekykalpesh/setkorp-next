@@ -106,7 +106,7 @@ export const Services = () => {
       <div className="relative space-y-4 md:space-y-0">
         {services.map((service, index) => (
           <div key={index} className="sticky top-12 md:top-20 h-auto md:h-[90vh] container mx-auto px-4 md:px-20 flex items-center justify-center" style={{ zIndex: index + 1 }}>
-            <div className="w-full max-w-7xl md:h-[70vh] bg-white border border-slate-200/50 rounded-2xl overflow-hidden grid md:grid-cols-2 shadow-lg hover:shadow-xl transition-all duration-500">
+            <div className="w-full max-w-7xl md:h-[70vh] bg-white border border-slate-200/40 rounded-xl overflow-hidden grid md:grid-cols-2 shadow-sm hover:shadow-md transition-all duration-500">
               {/* LEFT SIDE: CONTENT */}
               <div className={cn("p-8 md:p-16 flex flex-col justify-center border-b md:border-b-0 md:border-r border-slate-100 relative bg-gradient-to-br to-transparent", service.bgColor)}>
                 <div className="relative z-10">
@@ -164,11 +164,11 @@ export const Services = () => {
                     </div>
 
                     <div className="relative z-10 p-8 flex flex-col items-center w-full">
-                      <div className={cn("w-24 h-24 md:w-32 md:h-32 rounded-full flex items-center justify-center mb-6 bg-gradient-to-br shadow-md", 
-                        service.color === 'brand' ? 'from-brand/40 to-brand/20 border border-brand/20' :
-                        service.color === 'gold' ? 'from-gold/40 to-gold/20 border border-gold/20' :
-                        service.color === 'success' ? 'from-success/40 to-success/20 border border-success/20' :
-                        'from-blue-400/40 to-blue-400/20 border border-blue-400/20'
+                      <div className={cn("w-24 h-24 md:w-32 md:h-32 rounded-full flex items-center justify-center mb-6 bg-gradient-to-br shadow-sm", 
+                        service.color === 'brand' ? 'from-brand/40 to-brand/20 border border-brand/10' :
+                        service.color === 'gold' ? 'from-gold/40 to-gold/20 border border-gold/10' :
+                        service.color === 'success' ? 'from-success/40 to-success/20 border border-success/10' :
+                        'from-blue-400/40 to-blue-400/20 border border-blue-400/10'
                       )}>
                         <service.graphicIcon className={cn("w-12 h-12 md:w-16 md:h-16", service.textColor)} />
                       </div>
