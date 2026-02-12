@@ -21,7 +21,7 @@ const services = [
     graphicTitle: "Business Setup",
     graphicSub: "Mainland & Freezone Experts",
     graphicTags: [{ icon: CheckCircle, label: "Licensed" }, { icon: ShieldCheck, label: "Compliant" }],
-    image: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=2670&auto=format&fit=crop"
+    image: "https://images.unsplash.com/photo-1577412647305-991150c7d163?q=80&w=2670&auto=format&fit=crop" // Corporate consultation/legal documents
   },
   {
     number: "02",
@@ -41,7 +41,7 @@ const services = [
     graphicTitle: "Corporate Banking",
     graphicSub: "UAE's Premier Banking Liaison",
     graphicTags: [{ icon: CreditCard, label: "Multi-Currency" }, { icon: Globe, label: "Global Access" }],
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2426&auto=format&fit=crop"
+    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2670&auto=format&fit=crop" // High-visibility Financial District Skyscraper
   },
   {
     number: "03",
@@ -61,7 +61,7 @@ const services = [
     graphicTitle: "Office Solutions",
     graphicSub: "Prime Dubai Locations",
     graphicTags: [{ icon: MapPin, label: "Locations" }, { icon: Key, label: "Ready" }],
-    image: "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2669&auto=format&fit=crop"
+    image: "https://images.unsplash.com/photo-1497366811353-6870744d04b2?q=80&w=2670&auto=format&fit=crop" // Premium high-end corporate office
   },
   {
     number: "04",
@@ -81,7 +81,7 @@ const services = [
     graphicTitle: "Financial Services",
     graphicSub: "Compliance & Expert Advisory",
     graphicTags: [{ icon: FileCheck, label: "Filing" }, { icon: Lock, label: "Secure" }],
-    image: "https://images.unsplash.com/photo-1586281380349-632531db7ed4?q=80&w=2670&auto=format&fit=crop"
+    image: "https://images.unsplash.com/photo-1554415707-6e8cfc93fe23?q=80&w=2670&auto=format&fit=crop" // Professional at work with financial reports
   }
 ];
 
