@@ -3,27 +3,27 @@ import { Marquee } from "./Marquee";
 
 const testimonials = [
   {
-    text: "Setkorp turned a 3-month nightmare into a 2-week success story. Their banking connections alone saved us 45 days. Highly recommend for anyone serious about Dubai.",
+    text: "I wasted 3 months with another firm before Setkorp. They got my bank account approved in 6 days. Wish I'd found them first.",
     author: "James Wilson",
-    sub: "Founder, SaaS Platform",
+    sub: "Founder, SaaS Platform • Silicon Oasis",
     image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=100&h=100&auto=format&fit=crop"
   },
   {
-    text: "Transparent pricing, no hidden fees, and a dedicated account manager who actually responded within hours. Setkorp made our expansion into DIFC seamless.",
+    text: "They quoted AED 28,000. Final bill? AED 28,000. No surprise fees, no upsells. Just honest work and fast responses.",
     author: "Sarah Chen",
-    sub: "Managing Partner, Project Management",
+    sub: "Managing Partner • Management Consultancy",
     image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=100&h=100&auto=format&fit=crop"
   },
   {
-    text: "We compared 5 incorporation firms. Setkorp was the only one who explained mainland vs. freezone trade-offs in plain English. Smart, honest, and efficient.",
+    text: "Other firms gave me jargon. Setkorp explained freezone vs mainland in 10 minutes and saved me AED 15,000 annually. Easy choice.",
     author: "Marcus Thorne",
-    sub: "CEO, E-Commerce Trading",
+    sub: "CEO • E-Commerce Trading Company",
     image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=100&h=100&auto=format&fit=crop"
   },
   {
-    text: "The best part about Setkorp is their follow-through. They didn't just get us the license; they helped us navigate the entire visa process for our team.",
+    text: "Setkorp turned a 3-month nightmare into a 2-week success story. Their banking connections alone saved us 45 days. Highly recommend.",
     author: "Elena Rodriguez",
-    sub: "Director of Operations",
+    sub: "Founder, Fintech • DIFC",
     image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=100&h=100&auto=format&fit=crop"
   }
 ];

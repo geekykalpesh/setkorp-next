@@ -20,10 +20,10 @@ export const Process = () => {
             <span className="text-xs tracking-wider uppercase">Simple Process</span>
           </div>
           <h2 className="text-3xl md:text-5xl font-extrabold text-primary mb-6 font-display">
-            Your <span className="text-brand">14-Day</span> Path to Dubai Business Ownership
+            How We Get You Operational in <span className="text-brand">14 Days</span>
           </h2>
           <p className="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
-            A proven, transparent process designed for international investors.
+            No surprises. No delays. Just a clear roadmap from first call to first invoice.
           </p>
         </div>
 
@@ -46,7 +46,7 @@ export const Process = () => {
                 <div className="text-sm font-semibold text-brand transition-all duration-500">Day 1</div>
               </div>
             </div>
-            <p className="text-slate-600 leading-relaxed transition-all duration-500">Share your business goals, industry, and budget. We'll recommend the best incorporation structure and freezone/mainland option.</p>
+            <p className="text-slate-600 leading-relaxed transition-all duration-500">Tell us your business model and budget. We'll recommend the exact structure that minimizes your tax and setup costs—no upselling.</p>
           </CardSpotlight>
 
           {/* Card 2: Documentation */}
@@ -66,7 +66,7 @@ export const Process = () => {
                 <div className="text-sm font-semibold text-gold transition-all duration-500">Days 2-7</div>
               </div>
             </div>
-            <p className="text-slate-600 leading-relaxed transition-all duration-500">We handle paperwork, government approvals, and license applications. You review and e-sign from anywhere in the world.</p>
+            <p className="text-slate-600 leading-relaxed transition-all duration-500">We prepare every document, chase every approval, and handle every government office. You just e-sign from wherever you are.</p>
           </CardSpotlight>
 
           {/* Card 3: Banking & Office */}
@@ -86,7 +86,7 @@ export const Process = () => {
                 <div className="text-sm font-semibold text-success transition-all duration-500">Days 8-14</div>
               </div>
             </div>
-            <p className="text-slate-600 leading-relaxed transition-all duration-500">We submit your corporate banking application and connect you with real estate partners. By day 14, you're ready to operate.</p>
+            <p className="text-slate-600 leading-relaxed transition-all duration-500">Your bank account is approved, your office is ready, and your first invoice is legally compliant. You're officially in business.</p>
           </CardSpotlight>
         </div>
 
@@ -105,7 +105,7 @@ export const Process = () => {
                 </h3>
               </div>
               <p className="text-lg md:text-xl text-slate-600 max-w-none mx-auto leading-relaxed">
-                Compliance calendar, renewals, and growth advisory—we're your long-term prosperity partner in Dubai.
+                License renewals, visa additions, tax filings—we handle it all. Think of us as your Dubai operations team on retainer.
               </p>
             </div>
           </div>

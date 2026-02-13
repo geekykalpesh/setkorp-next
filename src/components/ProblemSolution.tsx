@@ -11,11 +11,11 @@ export const ProblemSolution = () => {
       <div className="container mx-auto px-6 md:px-20">
         <div className="text-center mb-12 md:mb-20">
           <h2 className="text-3xl md:text-5xl font-extrabold text-primary mb-6 leading-tight font-display">
-            Setting Up in <span className="text-brand">Dubai</span> Shouldn't Feel Like Navigating a Maze
+            Most Founders Waste 3 Months on <span className="text-brand">Setup Alone</span>
           </h2>
-          <h2 className="text-lg md:text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed">
-            Stop wasting time with bureaucratic hurdles. Here's how Setkorp changes the equation.
-          </h2>
+          <p className="text-lg md:text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed">
+            You're here to build a business, not decode regulations. Here's what changes with Setkorp.
+          </p>
         </div>
         
         <div className="grid lg:grid-cols-2 gap-8 md:gap-12 group">
@@ -44,10 +44,10 @@ export const ProblemSolution = () => {
               {/* Right: Content */}
               <ul className="space-y-4">
                 {[
-                  "Confused by 40+ freezone options and complex regulations",
-                  "Spending weeks chasing bank account approvals",
-                  "Overpaying for services you don't need",
-                  "Missing critical compliance deadlines"
+                  "Paralyzed by 40+ freezone choices—no clear answer on which fits your business",
+                  "Bank rejections eating 6-8 weeks of your launch timeline",
+                  "Paying AED 15,000+ in surprise fees after you've already committed",
+                  "Compliance penalties because nobody told you about quarterly filings"
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-3 text-slate-600">
                     <AlertCircle className="w-5 h-5 text-red-400 mt-1 flex-shrink-0" />
@@ -88,10 +88,10 @@ export const ProblemSolution = () => {
               {/* Right: Content */}
               <ul className="space-y-4">
                 {[
-                  "Clear roadmap: We match you to the perfect freezone or mainland structure",
-                  "Banking relationships secured within 7 business days",
-                  "Transparent, all-inclusive pricing—no hidden fees",
-                  "Compliance calendar and dedicated account manager"
+                  "We tell you exactly which structure saves you the most tax—in plain English",
+                  "Corporate bank account approved in 7 days (we know who to call)",
+                  "Fixed price quoted upfront—what you see is what you pay",
+                  "Never miss a deadline—we track every renewal and filing for you"
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-3 text-slate-700 font-medium">
                     <Check className="w-5 h-5 text-success mt-1 flex-shrink-0" />

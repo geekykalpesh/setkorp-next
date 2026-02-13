@@ -9,26 +9,26 @@ import type { AnimatedIconHandle } from "./types";
 export function FeaturesSectionWithHoverEffects() {
   const features = [
     {
-      title: "Clarity Meets Trust",
+      title: "You'll Actually Understand Your Options",
       description:
-        "No jargon. No surprises. Our transparency builds long-term partnerships from day one.",
+        "We explain freezone vs mainland in 5 minutes—no legal jargon, just what matters for your business.",
       Icon: SparklesIcon,
     },
     {
-      title: "Expertise Forge Excellence",
+      title: "We've Done This 500+ Times",
       description:
-        "15+ years of UAE expertise helping businesses across holding, tech, and energy sectors.",
+        "15 years in Dubai means we know every shortcut, every banker, and every compliance officer.",
       Icon: StarIcon,
     },
     {
-      title: "Launch Faster",
+      title: "From Call to Bank Account in 14 Days",
       description:
-        "Streamlined 14-day process saving you months of back-and-forth and hidden fees.",
+        "Most founders waste 90 days. Our process gets you operational in 2 weeks—guaranteed.",
       Icon: RocketIcon,
     },
     {
-      title: "Foundation to Build On",
-      description: "We provide honest advice and responsive support from day one to year ten of your journey.",
+      title: "We're Still Here After Setup",
+      description: "Need to hire your first employee in month 6? We'll walk you through it. That's the difference.",
       Icon: HeartIcon,
     },
   ];
@@ -60,9 +60,8 @@ const Feature = ({
       onMouseEnter={() => iconRef.current?.startAnimation()}
       onMouseLeave={() => iconRef.current?.stopAnimation()}
       className={cn(
-        "flex flex-col lg:border-r py-10 relative group/feature dark:border-neutral-800 cursor-pointer",
-        (index === 0) && "lg:border-l dark:border-neutral-800",
-        "dark:border-neutral-800"
+        "flex flex-col lg:border-r border-slate-200/60 py-10 relative group/feature dark:border-neutral-800/50 cursor-pointer",
+        (index === 0) && "lg:border-l border-slate-200/60 dark:border-neutral-800/50",
       )}
     >
       <div className="opacity-0 group-hover/feature:opacity-100 transition duration-200 absolute inset-0 h-full w-full bg-gradient-to-t from-brand/5 dark:from-brand/10 to-transparent pointer-events-none" />

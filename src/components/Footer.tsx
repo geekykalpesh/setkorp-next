@@ -26,7 +26,7 @@ export const Footer = () => {
               />
             </div>
             <p className="text-slate-300 max-w-sm mb-8 text-sm md:text-base leading-relaxed">
-              Expert business incorporation, banking, real estate & accounting for freezone and mainland setups in Dubai and UAE.
+              We help founders launch Dubai businesses in 14 days—from company registration to bank account, office, and compliant accounting.
             </p>
             <div className="flex gap-4">
               <Link href="http://linkedin.com/company/setkorp/about/" target="_blank" className="cursor-pointer w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-brand transition-colors">
@@ -76,7 +76,7 @@ export const Footer = () => {
           </div>
         </div>
         <div className="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6 text-xs md:text-sm text-slate-400">
-          <p>&copy; 2024 Setkorp Business Consultancy. All rights reserved.</p>
+          <p>&copy; 2026 Setkorp Business Consultancy. All rights reserved.</p>
           <div className="flex gap-4 md:gap-8">
             <Link href="#" className="cursor-pointer hover:text-white transition-colors">Privacy Policy</Link>
             <Link href="#" className="cursor-pointer hover:text-white transition-colors">Terms of Service</Link>

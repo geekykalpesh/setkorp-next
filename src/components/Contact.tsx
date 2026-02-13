@@ -18,17 +18,17 @@ export const Contact = () => {
               GET IN TOUCH
             </div>
             <h2 className="text-3xl md:text-5xl font-extrabold mb-6 text-primary leading-tight font-display">
-              Ready to Write Your Dubai <span className="text-brand">Success</span> Story?
+              Let's Get Your Business <span className="text-brand">Live</span> in Dubai
             </h2>
             <p className="text-lg md:text-xl text-slate-600 mb-12 leading-relaxed">
-              Experience transparency and strategic support from day one—book a free 30-minute strategy call today.
+              Book a 30-minute call. We'll map out your exact setup path, timeline, and costs—completely free, zero pressure.
             </p>
             
             <div className="space-y-6 md:space-y-8">
               {[
-                "No obligation, no sales pressure",
-                "Free cost breakdown & timeline estimate",
-                "Speak with a UAE specialist"
+                "No sales pitch—just honest answers to your questions",
+                "Exact cost quote (all-in, no hidden fees)",
+                "Talk to someone who's done this 500+ times"
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-4">
                   <div className="w-10 h-10 bg-brand/10 rounded-full flex items-center justify-center text-brand shrink-0">

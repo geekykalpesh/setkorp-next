@@ -20,10 +20,10 @@ export const Resources = () => {
               SETKORP INSIGHTS
             </div>
             <h2 className="text-3xl md:text-5xl font-extrabold mb-6 text-primary leading-tight font-display">
-              Expert Resources for Your Global <span className="text-brand">Expansion</span>
+              Know Your Costs Before <span className="text-brand">You Commit</span>
             </h2>
             <p className="text-lg md:text-xl text-slate-600 mb-10 leading-relaxed">
-              Get instant clarity on your Dubai setup costs or download our comprehensive 2024 incorporation guide.
+              Use our calculator to see exactly what your setup will cost—or download our guide to understand every option available.
             </p>
             
             <div className="grid sm:grid-cols-2 gap-6 md:gap-8">
@@ -40,7 +40,7 @@ export const Resources = () => {
                   <CalculatorIcon ref={gearRef1} className="w-6 h-6 text-brand" />
                 </div>
                 <h3 className="text-xl font-bold mb-2 text-primary font-display">Dubai Setup Cost Calculator</h3>
-                <p className="text-slate-500 text-sm mb-6 leading-relaxed">Get an instant, itemized estimate based on your specific visa and office requirements.</p>
+                <p className="text-slate-500 text-sm mb-6 leading-relaxed">Enter your visa count and office needs—get a detailed cost breakdown in 60 seconds.</p>
                 <Link 
                   href="#contact" 
                   onClick={() => gearRef2.current?.startAnimation()}
@@ -62,8 +62,8 @@ export const Resources = () => {
                 <div className="w-12 h-12 bg-brand/10 rounded-xl flex items-center justify-center mb-6">
                   <SparklesIcon ref={sparklesRef1} className="w-6 h-6 text-brand" />
                 </div>
-                <h3 className="text-xl font-bold mb-2 text-primary font-display">2024 Incorporation Guide</h3>
-                <p className="text-slate-500 text-sm mb-6 leading-relaxed">A 40-page blueprint covering tax policy, visa laws, and freezone comparisons.</p>
+                <h3 className="text-xl font-bold mb-2 text-primary font-display">2026 Incorporation Guide</h3>
+                <p className="text-slate-500 text-sm mb-6 leading-relaxed">Everything you need to know: tax structures, visa options, and which freezone fits your business.</p>
                 <Link 
                   href="#contact" 
                   onClick={() => sparklesRef2.current?.startAnimation()}
@@ -82,7 +82,7 @@ export const Resources = () => {
                 <div className="text-center">
                   <div className="font-bold text-xs uppercase tracking-widest text-brand mb-2">Setkorp</div>
                   <div className="font-extrabold text-sm leading-tight font-display">DUBAI BUSINESS SETUP <span className="text-brand">GUIDE</span></div>
-                  <div className="mt-4 text-[10px] text-slate-400">2024 Edition</div>
+                  <div className="mt-4 text-[10px] text-slate-400">2026 Edition</div>
                 </div>
               </div>
             </div>

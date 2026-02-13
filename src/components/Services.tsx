@@ -6,7 +6,7 @@ const services = [
   {
     number: "01",
     title: "Business Incorporation & Licensing",
-    desc: "Freezone vs. mainland analysis, license application, visa allocation planning, and legal documentation.",
+    desc: "We pick the right structure for your business, file all paperwork, and get your trade license approved—fast.",
     points: ["Legal navigation", "Government approvals", "Visa planning"],
     icon: Building2,
     color: "brand",
@@ -21,12 +21,12 @@ const services = [
     graphicTitle: "Business Setup",
     graphicSub: "Mainland & Freezone Experts",
     graphicTags: [{ icon: CheckCircle, label: "Licensed" }, { icon: ShieldCheck, label: "Compliant" }],
-    image: "https://images.unsplash.com/photo-1577412647305-991150c7d163?q=80&w=2670&auto=format&fit=crop" // Corporate consultation/legal documents
+    image: "https://images.unsplash.com/photo-1577412647305-991150c7d163?q=80&w=2670&auto=format&fit=crop"
   },
   {
     number: "02",
     title: "Corporate Banking Made Simple",
-    desc: "Securing corporate accounts within 7 business days through our elite UAE banking relationships.",
+    desc: "Banks reject 40% of applications. We get you approved in 7 days because we know exactly what they need.",
     points: ["Application support", "Multi-currency accounts", "Elite partnerships"],
     icon: Landmark,
     color: "gold",
@@ -41,12 +41,12 @@ const services = [
     graphicTitle: "Corporate Banking",
     graphicSub: "UAE's Premier Banking Liaison",
     graphicTags: [{ icon: CreditCard, label: "Multi-Currency" }, { icon: Globe, label: "Global Access" }],
-    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2670&auto=format&fit=crop" // High-visibility Financial District Skyscraper
+    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2670&auto=format&fit=crop"
   },
   {
     number: "03",
     title: "Office Spaces & Corporate Real Estate",
-    desc: "From flexi-desks to executive suites, we connect you with vetted agents and negotiate best terms.",
+    desc: "Need a desk for AED 1,500/month or a full office? We'll find it, negotiate the lease, and handle Ejari registration.",
     points: ["Office sourcing", "Ejari registration", "Vetted agent network"],
     icon: Building,
     color: "success",
@@ -61,12 +61,12 @@ const services = [
     graphicTitle: "Office Solutions",
     graphicSub: "Prime Dubai Locations",
     graphicTags: [{ icon: MapPin, label: "Locations" }, { icon: Key, label: "Ready" }],
-    image: "https://images.unsplash.com/photo-1497366811353-6870744d04b2?q=80&w=2670&auto=format&fit=crop" // Premium high-end corporate office
+    image: "https://images.unsplash.com/photo-1497366811353-6870744d04b2?q=80&w=2670&auto=format&fit=crop"
   },
   {
     number: "04",
     title: "Accounting, VAT & Audit Services",
-    desc: "Stay compliant with UAE laws while we handle bookkeeping, VAT, and corporate tax advisory.",
+    desc: "Avoid AED 50,000 penalties for late VAT filing. We handle your books, taxes, and audits—all compliant, all on time.",
     points: ["Monthly bookkeeping", "VAT & Tax filing", "Tax advisory"],
     icon: Calculator,
     color: "blue-400",
@@ -81,7 +81,7 @@ const services = [
     graphicTitle: "Financial Services",
     graphicSub: "Compliance & Expert Advisory",
     graphicTags: [{ icon: FileCheck, label: "Filing" }, { icon: Lock, label: "Secure" }],
-    image: "https://images.unsplash.com/photo-1554415707-6e8cfc93fe23?q=80&w=2670&auto=format&fit=crop" // Professional at work with financial reports
+    image: "https://images.unsplash.com/photo-1554415707-6e8cfc93fe23?q=80&w=2670&auto=format&fit=crop"
   }
 ];
 
@@ -95,10 +95,10 @@ export const Services = () => {
           <span className="text-xs tracking-wider uppercase">Complete Solutions</span>
         </div>
         <h2 className="text-3xl md:text-5xl font-extrabold text-primary mb-6 font-display">
-          Services Beyond <span className="text-brand">Expectations</span>
+          Everything You Need to <span className="text-brand">Start Operating</span>
         </h2>
         <p className="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
-          Transform your business vision into reality with seamlessly integrated solutions. We design and operate a unified business setup system where every component feeds the next.
+          Company registration is just the start. You need a bank account, an office, and compliant books. We handle all of it so you can focus on customers, not paperwork.
         </p>
       </div>
 
@@ -108,7 +108,7 @@ export const Services = () => {
           <div key={index} className="sticky top-0 md:top-20 h-screen md:h-[90vh] container mx-auto px-4 md:px-20 flex items-center justify-center -mb-20 md:mb-0" style={{ zIndex: index + 1 }}>
             <div className="w-full max-w-7xl h-[85vh] md:h-[70vh] bg-white border border-slate-200 rounded-xl overflow-hidden grid md:grid-cols-2 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_40px_rgb(0,0,0,0.08)] transition-all duration-500">
               {/* LEFT SIDE: CONTENT */}
-              <div className={cn("p-6 md:p-16 flex flex-col justify-center border-b md:border-b-0 md:border-r border-slate-100 relative bg-gradient-to-br to-transparent overflow-y-auto", service.bgColor)}>
+              <div className={cn("p-6 md:p-16 flex flex-col justify-center border-b md:border-b-0 md:border-r border-slate-100 relative bg-gradient-to-br to-transparent", service.bgColor)}>
                 <div className="relative z-10">
                   <div className={cn("inline-flex items-center px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-[0.2em] mb-6 border", 
                     service.color === 'brand' ? 'bg-brand/10 text-brand border-brand/10' :
