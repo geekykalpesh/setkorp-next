@@ -40,8 +40,8 @@ export const Hero = () => {
                 aria-label="Book your free strategy call"
               >
                 <span className="flex items-center gap-2">
-                  Book Your Free Strategy Call
                   <PhoneVolumeIcon ref={phoneRef} size={20} className="stroke-[2.5px]" />
+                  Book Your Free Strategy Call
                 </span>
               </Link>
               
@@ -50,11 +50,11 @@ export const Hero = () => {
                 href="#calculator" 
                 onClick={() => calcRef.current?.startAnimation()}
                 className="group w-full sm:w-auto cursor-pointer bg-white text-slate-700 border border-slate-200 px-8 py-4 rounded-lg text-base md:text-lg font-bold transition-all duration-300 shadow-sm hover:shadow-md hover:border-brand/20 hover:text-brand hover:-translate-y-1 flex items-center justify-center focus:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2" 
-                aria-label="Open setup cost calculator"
+                aria-label="Open cost calculator"
               >
                 <span className="flex items-center gap-2">
                   <CalculatorIcon ref={calcRef} size={20} className="text-brand stroke-[2.5px]" />
-                  Setup Cost Calculator
+                  Cost Calculator
                 </span>
               </Link>
             </div>
