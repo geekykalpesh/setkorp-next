@@ -11,8 +11,10 @@ export const Footer = () => {
   const mailRef = useRef<AnimatedIconHandle>(null);
 
   return (
-    <footer className="bg-primary text-white py-12 md:py-24 px-6 border-t border-white/5 relative overflow-hidden">
-      <div className="absolute inset-0 pointer-events-none opacity-15 flex items-center justify-center">
+    <footer className="bg-primary text-white py-12 md:py-24 px-6 border-t border-white/5 relative">
+      {/* Background filler for iOS overscroll - matches footer bg */}
+      <div className="absolute top-full left-0 w-full h-[100vh] bg-primary pointer-events-none" />
+      <div className="absolute inset-0 pointer-events-none opacity-18 flex items-center justify-center">
         <DottedMap className="w-full h-full text-white" />
       </div>
       <div className="container mx-auto relative z-10">
