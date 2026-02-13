@@ -18,8 +18,12 @@ export const Footer = () => {
       <div className="container mx-auto relative z-10">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           <div className="col-span-1 sm:col-span-2">
-            <div className="text-2xl font-bold mb-6 text-white font-display">
-              <span className="text-brand">SET</span>KORP
+            <div className="mb-6">
+              <img 
+                src="/images/logo.svg" 
+                alt="Setkorp Logo" 
+                className="h-8 w-auto brightness-0 invert" 
+              />
             </div>
             <p className="text-slate-300 max-w-sm mb-8 text-sm md:text-base leading-relaxed">
               Expert business incorporation, banking, real estate & accounting for freezone and mainland setups in Dubai and UAE.

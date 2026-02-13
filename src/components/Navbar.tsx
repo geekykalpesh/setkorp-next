@@ -38,8 +38,12 @@ export const Navbar = () => {
         <nav className="px-6 py-4 flex items-center">
           {/* Logo Group */}
           <div className="flex-1 flex items-center">
-            <Link href="/" className="flex items-center text-2xl font-bold tracking-tight text-primary">
-              <span className="text-brand">SET</span>KORP
+            <Link href="/" className="flex items-center">
+              <img 
+                src="/images/logo.svg" 
+                alt="Setkorp Logo" 
+                className="h-8 w-auto" 
+              />
             </Link>
           </div>
           
@@ -78,8 +82,12 @@ export const Navbar = () => {
       {/* Mobile Menu Dropdown */}
       <div className={`fixed top-0 left-0 right-0 w-full bg-white shadow-2xl z-[60] lg:hidden flex flex-col p-8 pt-24 transition-transform duration-400 ease-in-out ${isMenuOpen ? 'translate-y-0' : '-translate-y-full'}`}>
         <div className="flex justify-between items-center mb-12">
-          <div className="text-xl font-bold tracking-tight text-primary">
-            <span className="text-brand">SET</span>KORP
+          <div className="flex items-center">
+            <img 
+              src="/images/logo.svg" 
+              alt="Setkorp Logo" 
+              className="h-7 w-auto" 
+            />
           </div>
           <button onClick={() => setIsMenuOpen(false)} className="p-2 text-slate-400 hover:text-brand">
             <X className="w-6 h-6" />

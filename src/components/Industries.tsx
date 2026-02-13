@@ -36,14 +36,14 @@ export const Industries = () => {
       <div className="container mx-auto">
         <div className="max-w-6xl mx-auto">
           {/* Welcome Header */}
-          <div className="mb-12 md:mb-20 text-center md:text-left hidden md:block">
-            <h2 className="text-3xl md:text-5xl font-extrabold text-primary mb-6">
+          <div className="mb-12 md:mb-20 text-center md:text-left block">
+            <h2 className="text-3xl md:text-5xl font-extrabold text-primary mb-6 font-display">
               Welcome to <span className="text-brand">Setkorp</span>
             </h2>
             <h3 className="text-xl md:text-3xl font-bold text-slate-700 mb-6 font-display">
               Your Gateway to Seamless Business Setup in Dubai
             </h3>
-            <p className="text-lg md:text-xl text-slate-600 max-w-4xl mx-auto md:mx-0 leading-relaxed">
+            <p className="text-lg md:text-xl text-slate-600 max-w-4xl mx-auto md:mx-0 leading-relaxed font-sans">
               Setkorp delivers end-to-end business setup solutions with transparency and efficiency—from free zone to mainland formations—all through one reliable portal for your business needs.
             </p>
           </div>
