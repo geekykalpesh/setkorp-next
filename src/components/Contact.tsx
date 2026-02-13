@@ -12,7 +12,7 @@ export const Contact = () => {
       <div className="container mx-auto px-6">
         <div className="bg-white rounded-3xl md:rounded-lg overflow-hidden border border-slate-100 shadow-elevated flex flex-col lg:flex-row">
           {/* Info Side */}
-          <div className="lg:w-1/2 p-8 md:p-16 lg:p-20 bg-slate-50 border-r border-slate-100">
+          <div className="lg:w-1/2 p-8 md:p-16 lg:p-20 bg-slate-50 lg:border-r border-slate-100">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand/10 text-brand text-xs font-bold mb-8 md:mb-10">
               <span className="w-1 h-1 rounded-full bg-brand"></span>
               GET IN TOUCH

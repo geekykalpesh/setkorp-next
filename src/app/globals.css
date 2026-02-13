@@ -173,11 +173,15 @@
 }
 
 @layer base {
-  * {
-    @apply border-border outline-ring/50;
+  html {
+    background-color: #0A1628; /* Footer color for bottom overscroll */
+    scroll-behavior: smooth;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply text-foreground;
+    background-color: #FDFDFD; /* Main color for top overscroll */
+    min-height: 100vh;
+    min-height: 100svh;
   }
   button, a, select, details, summary {
     cursor: pointer;

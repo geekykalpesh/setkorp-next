@@ -103,12 +103,12 @@ export const Services = () => {
       </div>
 
       {/* Sticky Stacking Cards Container */}
-      <div className="relative space-y-4 md:space-y-0">
+      <div className="relative space-y-0">
         {services.map((service, index) => (
-          <div key={index} className="sticky top-12 md:top-20 h-auto md:h-[90vh] container mx-auto px-4 md:px-20 flex items-center justify-center" style={{ zIndex: index + 1 }}>
-            <div className="w-full max-w-7xl md:h-[70vh] bg-white border border-slate-200 rounded-xl overflow-hidden grid md:grid-cols-2 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_40px_rgb(0,0,0,0.08)] transition-all duration-500">
+          <div key={index} className="sticky top-0 md:top-20 h-screen md:h-[90vh] container mx-auto px-4 md:px-20 flex items-center justify-center -mb-20 md:mb-0" style={{ zIndex: index + 1 }}>
+            <div className="w-full max-w-7xl h-[85vh] md:h-[70vh] bg-white border border-slate-200 rounded-xl overflow-hidden grid md:grid-cols-2 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_40px_rgb(0,0,0,0.08)] transition-all duration-500">
               {/* LEFT SIDE: CONTENT */}
-              <div className={cn("p-8 md:p-16 flex flex-col justify-center border-b md:border-b-0 md:border-r border-slate-100 relative bg-gradient-to-br to-transparent", service.bgColor)}>
+              <div className={cn("p-6 md:p-16 flex flex-col justify-center border-b md:border-b-0 md:border-r border-slate-100 relative bg-gradient-to-br to-transparent overflow-y-auto", service.bgColor)}>
                 <div className="relative z-10">
                   <div className={cn("inline-flex items-center px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-[0.2em] mb-6 border", 
                     service.color === 'brand' ? 'bg-brand/10 text-brand border-brand/10' :
