@@ -12,7 +12,7 @@ export const Footer = () => {
 
   return (
     <footer className="bg-primary text-white py-12 md:py-24 px-6 border-t border-white/5 relative overflow-hidden">
-      <div className="absolute inset-0 pointer-events-none opacity-10 flex items-center justify-center">
+      <div className="absolute inset-0 pointer-events-none opacity-15 flex items-center justify-center">
         <DottedMap className="w-full h-full text-white" />
       </div>
       <div className="container mx-auto relative z-10">
