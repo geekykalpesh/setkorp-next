@@ -192,10 +192,10 @@
   }
 
   .hero-mobile-video {
-    transform: translateY(-50px) scale(1.15) !important;
+    transform: translateY(-75px) scale(1.15) !important;
   }
   
   .hero-mobile-content {
-    padding-bottom: 60px !important;
+    padding-bottom: 110px !important;
   }
 }
