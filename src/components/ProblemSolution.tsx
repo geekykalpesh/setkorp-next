@@ -7,7 +7,7 @@ export const ProblemSolution = () => {
   const checkRef = useRef<AnimatedIconHandle>(null);
 
   return (
-    <section className="py-12 md:py-24 bg-slate-50">
+    <section className="py-12 md:py-24 bg-white">
       <div className="container mx-auto px-6 md:px-20">
         <div className="text-center mb-12 md:mb-20">
           <h2 className="text-3xl md:text-5xl font-extrabold text-primary mb-6 leading-tight font-display">
@@ -20,7 +20,7 @@ export const ProblemSolution = () => {
         
         <div className="grid lg:grid-cols-2 gap-8 md:gap-12 group">
           {/* Without Setkorp */}
-          <div className="p-8 md:p-12 rounded-lg border border-red-100" style={{ backgroundColor: '#FCFCFC' }}>
+          <div className="p-8 md:p-12 rounded-lg border border-red-100 bg-white">
             <div className="flex items-center gap-3 mb-8">
               <h3 className="text-4xl font-bold text-black font-display">Without Setkorp</h3>
             </div>
@@ -62,8 +62,7 @@ export const ProblemSolution = () => {
           <div 
             onMouseEnter={() => checkRef.current?.startAnimation()}
             onMouseLeave={() => checkRef.current?.stopAnimation()}
-            className="p-8 md:p-12 rounded-lg border-2 border-brand shadow-xl shadow-brand/10 cursor-pointer"
-            style={{ backgroundColor: '#FCFCFC' }}
+            className="p-8 md:p-12 rounded-lg border-2 border-success shadow-xl shadow-success/10 cursor-pointer bg-white"
           >
             <div className="flex items-center gap-3 mb-8">
               <h3 className="text-4xl font-bold text-primary font-display">With <span className="text-brand">Setkorp</span></h3>
