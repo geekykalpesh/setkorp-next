@@ -18,7 +18,7 @@ The platform features a high-end cinematic video background in the hero section,
   </video>
 </p>
 
----
+------
 
 ## ✨ Key Features
 
