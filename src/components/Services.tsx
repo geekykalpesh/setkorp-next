@@ -1,6 +1,10 @@
+"use client";
+
 import { Building2, Landmark, Building, Calculator, CheckCircle, ShieldCheck, CreditCard, Globe, MapPin, Key, FileCheck, Layout, PieChart, Lock, Search, Rocket, Zap, Handshake, Coins, Compass, Navigation, FileText } from "lucide-react";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
+import { motion } from "motion/react";
+import { springConfigs } from "./ui/SpringAnimations";
 
 const services = [
   {
@@ -89,7 +93,13 @@ export const Services = () => {
   return (
     <section id="services" className="relative bg-slate-50 overflow-visible py-12 md:py-24">
       {/* Header Section */}
-      <div className="container mx-auto mb-12 md:mb-20 text-center">
+      <motion.div 
+        className="container mx-auto mb-12 md:mb-20 text-center"
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ type: "spring", ...springConfigs.smooth, delay: 0.1 }}
+      >
         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand/10 text-brand text-sm font-bold mb-6">
           <span className="w-1.5 h-1.5 rounded-full bg-brand"></span>
           <span className="text-xs tracking-wider uppercase">Complete Solutions</span>
@@ -100,12 +110,16 @@ export const Services = () => {
         <p className="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
           Company registration is just the start. You need a bank account, an office, and compliant books. We handle all of it so you can focus on customers, not paperwork.
         </p>
-      </div>
+      </motion.div>
 
       {/* Sticky Stacking Cards Container */}
       <div className="relative space-y-0">
         {services.map((service, index) => (
-          <div key={index} className="sticky top-0 md:top-20 h-screen md:h-[90vh] container mx-auto px-4 md:px-20 flex items-center justify-center -mb-20 md:mb-0" style={{ zIndex: index + 1 }}>
+          <div 
+            key={index} 
+            className="sticky top-0 md:top-20 h-screen md:h-[90vh] container mx-auto px-4 md:px-20 flex items-center justify-center -mb-20 md:mb-0" 
+            style={{ zIndex: index + 1 }}
+          >
             <div className="w-full max-w-7xl h-[85vh] md:h-[70vh] bg-white border border-slate-200 rounded-xl overflow-hidden grid md:grid-cols-2 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_40px_rgb(0,0,0,0.08)] transition-all duration-500">
               {/* LEFT SIDE: CONTENT */}
               <div className={cn("p-6 md:p-16 flex flex-col justify-center border-b md:border-b-0 md:border-r border-slate-100 relative bg-gradient-to-br to-transparent", service.bgColor)}>
@@ -127,7 +141,10 @@ export const Services = () => {
                   
                   <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 gap-3 md:gap-4">
                     {service.points.map((point, i) => (
-                      <div key={i} className="flex items-center gap-3">
+                      <div 
+                        key={i} 
+                        className="flex items-center gap-3"
+                      >
                         <div className={cn("w-1.5 h-1.5 rounded-full", 
                           service.color === 'brand' ? 'bg-brand' :
                           service.color === 'gold' ? 'bg-gold' :

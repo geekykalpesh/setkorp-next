@@ -1,5 +1,9 @@
+"use client";
+
 import { Star } from "lucide-react";
 import { Marquee } from "./Marquee";
+import { motion } from "motion/react";
+import { springConfigs } from "./ui/SpringAnimations";
 
 const testimonials = [
   {
@@ -32,7 +36,13 @@ export const Testimonials = () => {
   return (
     <section className="py-24 bg-surface">
       <div className="container mx-auto">
-        <div className="text-center mb-16 px-6">
+        <motion.div 
+          className="text-center mb-16 px-6"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ type: "spring", ...springConfigs.smooth, delay: 0.1 }}
+        >
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand/10 text-brand text-sm font-bold mb-6">
             <span className="w-1.5 h-1.5 rounded-full bg-brand"></span>
             <span className="text-xs tracking-wider uppercase">Wall of Love</span>
@@ -43,7 +53,7 @@ export const Testimonials = () => {
           <p className="text-slate-600 max-w-2xl mx-auto text-lg leading-relaxed">
             Join 500+ global entrepreneurs who chose Setkorp for their Dubai business expansion.
           </p>
-        </div>
+        </motion.div>
 
         <div className="overflow-hidden relative py-8">
           <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-surface to-transparent z-10 hidden md:block"></div>

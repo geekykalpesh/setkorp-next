@@ -7,16 +7,38 @@ import { Industries } from "@/components/Industries";
 import { SocialProof } from "@/components/SocialProof";
 import { ProblemSolution } from "@/components/ProblemSolution";
 import { ValueProps } from "@/components/ValueProps";
-import { Reveal } from "@/components/Reveal";
 import { Footer } from "@/components/Footer";
 
-// Lazy load below-the-fold components
-const Services = dynamic(() => import("@/components/Services").then(mod => mod.Services));
-const Process = dynamic(() => import("@/components/Process").then(mod => mod.Process));
-const Testimonials = dynamic(() => import("@/components/Testimonials").then(mod => mod.Testimonials));
-const Resources = dynamic(() => import("@/components/Resources").then(mod => mod.Resources));
-const FAQ = dynamic(() => import("@/components/FAQ").then(mod => mod.FAQ));
-const Contact = dynamic(() => import("@/components/Contact").then(mod => mod.Contact));
+// Lazy load below-the-fold components with SSR disabled for better performance
+const Services = dynamic(() => import("@/components/Services").then(mod => mod.Services), {
+  ssr: false,
+  loading: () => <div className="h-screen bg-slate-50" />, // Placeholder to prevent layout shift
+});
+
+const Process = dynamic(() => import("@/components/Process").then(mod => mod.Process), {
+  ssr: false,
+  loading: () => <div className="h-96 bg-surface" />,
+});
+
+const Testimonials = dynamic(() => import("@/components/Testimonials").then(mod => mod.Testimonials), {
+  ssr: false,
+  loading: () => <div className="h-96 bg-surface" />,
+});
+
+const Resources = dynamic(() => import("@/components/Resources").then(mod => mod.Resources), {
+  ssr: false,
+  loading: () => <div className="h-96 bg-white" />,
+});
+
+const FAQ = dynamic(() => import("@/components/FAQ").then(mod => mod.FAQ), {
+  ssr: false,
+  loading: () => <div className="h-96 bg-surface" />,
+});
+
+const Contact = dynamic(() => import("@/components/Contact").then(mod => mod.Contact), {
+  ssr: false,
+  loading: () => <div className="h-screen bg-surface" />,
+});
 
 export default function Home() {
   return (
@@ -24,34 +46,16 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
-        <Reveal>
-          <Industries />
-        </Reveal>
-        <Reveal>
-          <SocialProof />
-        </Reveal>
-        <Reveal>
-          <ProblemSolution />
-        </Reveal>
-        <Reveal>
-          <ValueProps />
-        </Reveal>
+        <Industries />
+        <SocialProof />
+        <ProblemSolution />
+        <ValueProps />
         <Services />
-        <Reveal>
-          <Process />
-        </Reveal>
-        <Reveal>
-          <Testimonials />
-        </Reveal>
-        <Reveal>
-          <Resources />
-        </Reveal>
-        <Reveal>
-          <FAQ />
-        </Reveal>
-        <Reveal>
-          <Contact />
-        </Reveal>
+        <Process />
+        <Testimonials />
+        <Resources />
+        <FAQ />
+        <Contact />
       </main>
       <Footer />
     </div>

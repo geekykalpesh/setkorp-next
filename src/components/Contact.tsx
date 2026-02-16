@@ -4,13 +4,21 @@ import { useRef } from "react";
 import { Check, ChevronDown } from "lucide-react";
 import SendIcon from "./ui/send-icon";
 import type { AnimatedIconHandle } from "./ui/types";
+import { motion } from "motion/react";
+import { springConfigs } from "./ui/SpringAnimations";
 
 export const Contact = () => {
   const sendRef = useRef<AnimatedIconHandle>(null);
   return (
     <section id="contact" className="py-12 md:py-24 bg-surface overflow-hidden relative">
       <div className="container mx-auto px-6">
-        <div className="bg-white rounded-3xl md:rounded-lg overflow-hidden border border-slate-100 shadow-elevated flex flex-col lg:flex-row">
+        <motion.div 
+          className="bg-white rounded-3xl md:rounded-lg overflow-hidden border border-slate-100 shadow-elevated flex flex-col lg:flex-row"
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ type: "spring", ...springConfigs.smooth, delay: 0.1 }}
+        >
           {/* Info Side */}
           <div className="lg:w-1/2 p-8 md:p-16 lg:p-20 bg-slate-50 lg:border-r border-slate-100">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand/10 text-brand text-xs font-bold mb-8 md:mb-10">
@@ -30,12 +38,19 @@ export const Contact = () => {
                 "Exact cost quote (all-in, no hidden fees)",
                 "Talk to someone who's done this 500+ times"
               ].map((item, i) => (
-                <div key={i} className="flex items-center gap-4">
+                <motion.div 
+                  key={i} 
+                  className="flex items-center gap-4"
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ type: "spring", ...springConfigs.snappy, delay: 0.2 + i * 0.1 }}
+                >
                   <div className="w-10 h-10 bg-brand/10 rounded-full flex items-center justify-center text-brand shrink-0">
                     <Check className="w-5 h-5" />
                   </div>
                   <span className="text-slate-700 font-medium md:text-lg">{item}</span>
-                </div>
+                </motion.div>
               ))}
             </div>
             
@@ -100,7 +115,7 @@ export const Contact = () => {
               <p className="text-center text-xs text-slate-400">By submitting, you agree to our privacy policy. We'll never spam you.</p>
             </form>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
