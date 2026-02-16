@@ -51,17 +51,24 @@ export const AnimatedHeading: React.FC<AnimatedHeadingProps> = ({
     
     React.Children.forEach(node, (child) => {
       if (typeof child === "string") {
-        // Split text into words and add them to result
+        // Split text into words and add them to result with spaces
         const words = child.split(" ").filter(word => word.length > 0);
         words.forEach((word, index) => {
           result.push(word);
+          // Add space after each word except the last one
           if (index < words.length - 1) {
             result.push(" ");
           }
         });
+        // Add trailing space if original text ended with space
+        if (child.endsWith(" ")) {
+          result.push(" ");
+        }
       } else if (React.isValidElement(child)) {
         // Preserve JSX elements (like <span className="text-brand">)
         result.push(child);
+        // Add space after JSX element
+        result.push(" ");
       }
     });
     
@@ -74,7 +81,7 @@ export const AnimatedHeading: React.FC<AnimatedHeadingProps> = ({
   return (
     <div className={className}>
       {processedChildren.map((item, index) => {
-        // Skip spaces
+        // Handle spaces
         if (item === " ") {
           return <span key={index}> </span>;
         }
@@ -85,7 +92,7 @@ export const AnimatedHeading: React.FC<AnimatedHeadingProps> = ({
           return (
             <motion.span
               key={index}
-              className="inline-block"
+              className="inline-block mr-[0.25em]"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}

@@ -198,11 +198,11 @@ export const Services = () => {
                       </div>
                       <h4 className="text-xl font-bold text-white mb-2 text-center font-display">{service.graphicTitle}</h4>
                       <p className="text-xs md:text-sm text-white/90 text-center mb-6">{service.graphicSub}</p>
-                      <div className="flex flex-wrap justify-center gap-2 md:gap-3">
+                      <div className="flex flex-row flex-wrap justify-center gap-2 md:gap-3 w-full">
                         {service.graphicTags.map((tag, i) => (
-                          <div key={i} className="px-3 md:px-4 py-2 rounded-lg flex items-center bg-white/20 backdrop-blur-sm border border-white/40">
-                            <tag.icon className="w-4 h-4 mr-2 text-white" />
-                            <span className="text-[10px] md:text-xs font-semibold text-white">{tag.label}</span>
+                          <div key={i} className="px-2.5 md:px-4 py-1.5 md:py-2 rounded-lg flex items-center bg-white/20 backdrop-blur-sm border border-white/40 flex-shrink-0">
+                            <tag.icon className="w-3.5 h-3.5 md:w-4 md:h-4 mr-1.5 md:mr-2 text-white" />
+                            <span className="text-[9px] md:text-xs font-semibold text-white whitespace-nowrap">{tag.label}</span>
                           </div>
                         ))}
                       </div>
