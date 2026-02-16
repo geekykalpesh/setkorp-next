@@ -33,56 +33,10 @@ const nextConfig: NextConfig = {
     webVitalsAttribution: ["CLS", "LCP"], // Track Core Web Vitals
   },
 
-  // Webpack Optimizations
-  webpack: (config, { isServer }) => {
-    // Optimize bundle size
-    config.optimization = {
-      ...config.optimization,
-      moduleIds: "deterministic",
-      runtimeChunk: "single",
-      splitChunks: {
-        chunks: "all",
-        cacheGroups: {
-          default: false,
-          vendors: false,
-          // Vendor chunk for node_modules
-          vendor: {
-            name: "vendor",
-            chunks: "all",
-            test: /node_modules/,
-            priority: 20,
-          },
-          // Common chunk for shared code
-          common: {
-            name: "common",
-            minChunks: 2,
-            chunks: "all",
-            priority: 10,
-            reuseExistingChunk: true,
-            enforce: true,
-          },
-          // Separate chunk for animations
-          animations: {
-            name: "animations",
-            test: /[\\/]node_modules[\\/](motion|framer-motion)[\\/]/,
-            chunks: "all",
-            priority: 30,
-          },
-        },
-      },
-    };
-
-    // Optimize for client-side only
-    if (!isServer) {
-      config.resolve.fallback = {
-        ...config.resolve.fallback,
-        fs: false,
-        net: false,
-        tls: false,
-      };
-    }
-
-    return config;
+  // Turbopack Configuration (Next.js 16+)
+  turbopack: {
+    // Turbopack handles most optimizations automatically
+    // No custom config needed for basic optimizations
   },
 
   // Headers for Caching & Performance
