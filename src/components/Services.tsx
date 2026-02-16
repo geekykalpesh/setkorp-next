@@ -124,12 +124,12 @@ export const Services = () => {
         {services.map((service, index) => (
           <div 
             key={index} 
-            className="sticky top-0 md:top-20 h-screen md:h-[90vh] container mx-auto px-4 md:px-20 flex items-center justify-center -mb-20 md:mb-0" 
+            className="sticky top-0 md:top-20 h-auto min-h-screen md:h-[90vh] container mx-auto px-2 md:px-20 flex items-center justify-center -mb-8 md:mb-0" 
             style={{ zIndex: index + 1 }}
           >
-            <div className="w-full max-w-7xl h-[85vh] md:h-[70vh] bg-white border border-slate-200 rounded-xl overflow-hidden grid md:grid-cols-2 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_40px_rgb(0,0,0,0.08)] transition-all duration-500">
+            <div className="w-full max-w-7xl h-auto md:h-[70vh] bg-white border border-slate-200 rounded-xl overflow-hidden flex flex-col md:grid md:grid-cols-2 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_40px_rgb(0,0,0,0.08)] transition-all duration-500 my-4 md:my-0">
               {/* LEFT SIDE: CONTENT */}
-              <div className={cn("p-6 md:p-16 flex flex-col justify-center border-b md:border-b-0 md:border-r border-slate-100 relative bg-gradient-to-br to-transparent", service.bgColor)}>
+              <div className={cn("p-5 md:p-16 flex flex-col justify-center border-b md:border-b-0 md:border-r border-slate-100 relative bg-gradient-to-br to-transparent", service.bgColor)}>
                 <div className="relative z-10">
                   <div className={cn("inline-flex items-center px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-[0.2em] mb-6 border", 
                     service.color === 'brand' ? 'bg-brand/10 text-brand border-brand/10' :
@@ -166,7 +166,7 @@ export const Services = () => {
               </div>
 
               {/* RIGHT SIDE: GRAPHIC */}
-              <div className={cn("p-8 md:p-10 flex items-center justify-center relative overflow-hidden bg-gradient-to-br to-slate-50", service.graphicBg)}>
+              <div className={cn("p-4 md:p-10 flex items-center justify-center relative overflow-hidden bg-gradient-to-br to-slate-50 min-h-[300px] md:min-h-0", service.graphicBg)}>
                 <div className="w-full h-full flex items-center justify-center">
                   <div className={cn("relative w-full h-full max-w-lg bg-white rounded-3xl shadow-xl overflow-hidden flex flex-col items-center justify-center border transition-all duration-500", 
                     service.color === 'brand' ? 'border-brand/20' :
@@ -180,28 +180,28 @@ export const Services = () => {
                         src={service.image} 
                         alt={service.title} 
                         fill 
-                        className="object-cover opacity-100"
+                        className="object-cover object-center opacity-100"
                         sizes="(max-width: 768px) 100vw, 50vw"
                       />
                       {/* Simple dark overlay */}
                       <div className="absolute inset-0 bg-gradient-to-br from-black/75 via-black/70 to-black/65"></div>
                     </div>
 
-                    <div className="relative z-10 p-8 flex flex-col items-center w-full">
-                      <div className={cn("w-24 h-24 md:w-32 md:h-32 rounded-full flex items-center justify-center mb-6 bg-gradient-to-br shadow-sm", 
+                    <div className="relative z-10 p-5 md:p-8 flex flex-col items-center w-full">
+                      <div className={cn("w-20 h-20 md:w-32 md:h-32 rounded-full flex items-center justify-center mb-4 md:mb-6 bg-gradient-to-br shadow-sm", 
                         service.color === 'brand' ? 'from-brand/40 to-brand/20 border border-brand/10' :
                         service.color === 'gold' ? 'from-gold/40 to-gold/20 border border-gold/10' :
                         service.color === 'success' ? 'from-success/40 to-success/20 border border-success/10' :
                         'from-blue-400/40 to-blue-400/20 border border-blue-400/10'
                       )}>
-                        <service.graphicIcon className={cn("w-12 h-12 md:w-16 md:h-16", service.textColor)} />
+                        <service.graphicIcon className={cn("w-10 h-10 md:w-16 md:h-16", service.textColor)} />
                       </div>
-                      <h4 className="text-xl font-bold text-white mb-2 text-center font-display">{service.graphicTitle}</h4>
-                      <p className="text-xs md:text-sm text-white/90 text-center mb-6">{service.graphicSub}</p>
+                      <h4 className="text-lg md:text-xl font-bold text-white mb-2 text-center font-display">{service.graphicTitle}</h4>
+                      <p className="text-[10px] md:text-sm text-white/90 text-center mb-5 md:mb-6">{service.graphicSub}</p>
                       <div className="flex flex-row flex-wrap justify-center gap-2 md:gap-3 w-full">
                         {service.graphicTags.map((tag, i) => (
-                          <div key={i} className="px-2.5 md:px-4 py-1.5 md:py-2 rounded-lg flex items-center bg-white/20 backdrop-blur-sm border border-white/40 flex-shrink-0">
-                            <tag.icon className="w-3.5 h-3.5 md:w-4 md:h-4 mr-1.5 md:mr-2 text-white" />
+                          <div key={i} className="px-2 md:px-4 py-1.5 md:py-2 rounded-lg flex items-center bg-white/20 backdrop-blur-sm border border-white/40 flex-shrink-0">
+                            <tag.icon className="w-3 md:w-4 h-3 md:h-4 mr-1 md:mr-2 text-white" />
                             <span className="text-[9px] md:text-xs font-semibold text-white whitespace-nowrap">{tag.label}</span>
                           </div>
                         ))}
