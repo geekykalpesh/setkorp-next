@@ -6,6 +6,7 @@ import Image from "next/image";
 import { motion } from "motion/react";
 import { springConfigs } from "./ui/SpringAnimations";
 import { AnimatedHeading } from "./ui/AnimatedText";
+import { AnimatedBadge, AnimatedParagraph } from "./ui/AnimationUtils";
 
 const services = [
   {
@@ -101,10 +102,10 @@ export const Services = () => {
         viewport={{ once: true, margin: "-100px" }}
         transition={{ type: "spring", ...springConfigs.smooth, delay: 0.1 }}
       >
-        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand/10 text-brand text-sm font-bold mb-6">
+        <AnimatedBadge className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand/10 text-brand text-sm font-bold mb-6" delay={0.05}>
           <span className="w-1.5 h-1.5 rounded-full bg-brand"></span>
           <span className="text-xs tracking-wider uppercase">Complete Solutions</span>
-        </div>
+        </AnimatedBadge>
         <AnimatedHeading
           className="text-3xl md:text-5xl font-extrabold text-primary mb-6 font-display"
           delay={0.15}
@@ -113,9 +114,9 @@ export const Services = () => {
         >
           Everything You Need to <span className="text-brand">Start Operating</span>
         </AnimatedHeading>
-        <p className="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
+        <AnimatedParagraph className="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed" delay={0.3}>
           Company registration is just the start. You need a bank account, an office, and compliant books. We handle all of it so you can focus on customers, not paperwork.
-        </p>
+        </AnimatedParagraph>
       </motion.div>
 
       {/* Sticky Stacking Cards Container */}

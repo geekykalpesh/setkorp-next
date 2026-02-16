@@ -4,6 +4,7 @@ import { FeaturesSectionWithHoverEffects } from "./ui/feature-section-with-hover
 import { SpringContainer } from "./ui/SpringAnimations";
 import { WordHighlight } from "./ui/TextAnimations";
 import { AnimatedHeading } from "./ui/AnimatedText";
+import { AnimatedParagraph } from "./ui/AnimationUtils";
 
 export const ValueProps = () => {
   return (
@@ -23,9 +24,9 @@ export const ValueProps = () => {
           >
             Why Founders Choose <span className="text-brand">Setkorp</span>
           </AnimatedHeading>
-          <p className="text-lg md:text-xl text-slate-600 leading-relaxed">
+          <AnimatedParagraph className="text-lg md:text-xl text-slate-600 leading-relaxed" delay={0.3}>
             We're not consultants who disappear after setup. We're the team that answers your 11 PM questions about VAT filing.
-          </p>
+          </AnimatedParagraph>
         </SpringContainer>
 
         <FeaturesSectionWithHoverEffects />

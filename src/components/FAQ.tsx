@@ -1,6 +1,8 @@
 import { useRef } from "react";
 import DownChevron from "./ui/down-chevron";
 import type { AnimatedIconHandle } from "./ui/types";
+import { AnimatedHeading } from "./ui/AnimatedText";
+import { FadeIn } from "./ui/AnimationUtils";
 
 const faqs = [
   {
@@ -35,11 +37,12 @@ const faqs = [
   }
 ];
 
-const FAQItem = ({ faq }: { faq: typeof faqs[0] }) => {
+const FAQItem = ({ faq, index }: { faq: typeof faqs[0]; index: number }) => {
   const iconRef = useRef<AnimatedIconHandle>(null);
 
   return (
-    <details 
+    <FadeIn delay={0.1 + index * 0.08} direction="up">
+      <details 
       onMouseEnter={() => iconRef.current?.startAnimation()}
       onMouseLeave={() => iconRef.current?.stopAnimation()}
       className="group bg-white rounded-lg border border-slate-100 p-6 [&_summary::-webkit-details-marker]:hidden cursor-pointer"
@@ -53,7 +56,8 @@ const FAQItem = ({ faq }: { faq: typeof faqs[0] }) => {
       <div className="mt-4 text-slate-600 leading-relaxed">
         {faq.a}
       </div>
-    </details>
+      </details>
+    </FadeIn>
   );
 };
 
@@ -62,14 +66,19 @@ export const FAQ = () => {
     <section id="faq" className="py-12 md:py-24 bg-slate-50">
       <div className="container mx-auto px-6">
         <div className="text-center mb-12 md:mb-20">
-          <h2 className="text-3xl md:text-5xl font-extrabold text-primary font-display">
+          <AnimatedHeading
+            className="text-3xl md:text-5xl font-extrabold text-primary font-display"
+            delay={0.1}
+            springConfig="snappy"
+            staggerWords={true}
+          >
             Your Questions, <span className="text-brand">Answered</span>
-          </h2>
+          </AnimatedHeading>
         </div>
 
         <div className="max-w-3xl mx-auto space-y-4">
           {faqs.map((faq, i) => (
-            <FAQItem key={i} faq={faq} />
+            <FAQItem key={i} faq={faq} index={i} />
           ))}
         </div>
       </div>

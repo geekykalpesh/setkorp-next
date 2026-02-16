@@ -5,6 +5,7 @@ import { Marquee } from "./Marquee";
 import { motion } from "motion/react";
 import { springConfigs } from "./ui/SpringAnimations";
 import { AnimatedHeading } from "./ui/AnimatedText";
+import { AnimatedBadge, AnimatedParagraph } from "./ui/AnimationUtils";
 
 const testimonials = [
   {
@@ -44,10 +45,10 @@ export const Testimonials = () => {
           viewport={{ once: true, margin: "-100px" }}
           transition={{ type: "spring", ...springConfigs.smooth, delay: 0.1 }}
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand/10 text-brand text-sm font-bold mb-6">
+          <AnimatedBadge className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand/10 text-brand text-sm font-bold mb-6" delay={0.05}>
             <span className="w-1.5 h-1.5 rounded-full bg-brand"></span>
             <span className="text-xs tracking-wider uppercase">Wall of Love</span>
-          </div>
+          </AnimatedBadge>
           <AnimatedHeading
             className="text-3xl md:text-5xl font-extrabold text-primary font-display mb-6"
             delay={0.15}
@@ -56,9 +57,9 @@ export const Testimonials = () => {
           >
             Our Clients Speak: Testimonials of <span className="text-brand">Trust</span>
           </AnimatedHeading>
-          <p className="text-slate-600 max-w-2xl mx-auto text-lg leading-relaxed">
+          <AnimatedParagraph className="text-slate-600 max-w-2xl mx-auto text-lg leading-relaxed" delay={0.3}>
             Join 500+ global entrepreneurs who chose Setkorp for their Dubai business expansion.
-          </p>
+          </AnimatedParagraph>
         </motion.div>
 
         <div className="overflow-hidden relative py-8">

@@ -10,6 +10,7 @@ import type { AnimatedIconHandle } from "./ui/types";
 import { motion } from "motion/react";
 import { springConfigs } from "./ui/SpringAnimations";
 import { AnimatedHeading } from "./ui/AnimatedText";
+import { AnimatedBadge, AnimatedParagraph } from "./ui/AnimationUtils";
 
 export const Process = () => {
   const phoneRef = useRef<AnimatedIconHandle>(null);
@@ -26,10 +27,10 @@ export const Process = () => {
           viewport={{ once: true, margin: "-100px" }}
           transition={{ type: "spring", ...springConfigs.smooth, delay: 0.1 }}
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand/10 text-brand text-sm font-bold mb-6">
+          <AnimatedBadge className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand/10 text-brand text-sm font-bold mb-6" delay={0.05}>
             <span className="w-1.5 h-1.5 rounded-full bg-brand"></span>
             <span className="text-xs tracking-wider uppercase">Simple Process</span>
-          </div>
+          </AnimatedBadge>
           <AnimatedHeading
             className="text-3xl md:text-5xl font-extrabold text-primary mb-6 font-display"
             delay={0.15}
@@ -38,9 +39,9 @@ export const Process = () => {
           >
             How We Get You Operational in <span className="text-brand">14 Days</span>
           </AnimatedHeading>
-          <p className="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
+          <AnimatedParagraph className="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed" delay={0.3}>
             No surprises. No delays. Just a clear roadmap from first call to first invoice.
-          </p>
+          </AnimatedParagraph>
         </motion.div>
 
         {/* 3 Step Cards Grid */}

@@ -4,6 +4,7 @@ import { Marquee } from "./Marquee";
 import Image from "next/image";
 import { motion } from "motion/react";
 import { springConfigs } from "./ui/SpringAnimations";
+import { AnimatedParagraph } from "./ui/AnimationUtils";
 
 const partners = [
   { src: "/images/MFZ-logo-01-1536x1086-1-300x212.webp", alt: "Meydan Free Zone Logo - Setkorp Partner" },
@@ -21,15 +22,12 @@ export const SocialProof = () => {
   return (
     <section className="py-12 bg-surface border-y border-slate-100 overflow-hidden relative">
       <div className="container mx-auto px-6">
-        <motion.p 
+        <AnimatedParagraph 
           className="text-center text-xs md:text-sm font-bold text-slate-400 uppercase tracking-[0.3em] mb-10"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ type: "spring", ...springConfigs.smooth, delay: 0.1 }}
+          delay={0.1}
         >
           Institutional Partnership Network
-        </motion.p>
+        </AnimatedParagraph>
         
         <div className="relative group">
           {/* Subtle Gradient Masks */}

@@ -8,6 +8,7 @@ import { SlideTransition, StaggerContainer } from "./ui/TransitionEffects";
 import { SpringContainer, InteractiveSpring } from "./ui/SpringAnimations";
 import { WordHighlight } from "./ui/TextAnimations";
 import { AnimatedHeading } from "./ui/AnimatedText";
+import { AnimatedParagraph } from "./ui/AnimationUtils";
 
 export const ProblemSolution = () => {
   const checkRef = useRef<AnimatedIconHandle>(null);
@@ -29,9 +30,9 @@ export const ProblemSolution = () => {
           >
             Most Founders <span className="text-brand">Waste</span> 3 Months on Setup Alone
           </AnimatedHeading>
-          <p className="text-lg md:text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed">
+          <AnimatedParagraph className="text-lg md:text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed" delay={0.3}>
             You're here to build a business, not decode regulations. Here's what changes with Setkorp.
-          </p>
+          </AnimatedParagraph>
         </SpringContainer>
         
         <div className="grid lg:grid-cols-2 gap-8 md:gap-12 group">

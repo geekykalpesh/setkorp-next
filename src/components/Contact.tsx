@@ -7,6 +7,7 @@ import type { AnimatedIconHandle } from "./ui/types";
 import { motion } from "motion/react";
 import { springConfigs } from "./ui/SpringAnimations";
 import { AnimatedHeading } from "./ui/AnimatedText";
+import { AnimatedBadge, AnimatedParagraph } from "./ui/AnimationUtils";
 
 export const Contact = () => {
   const sendRef = useRef<AnimatedIconHandle>(null);
@@ -22,10 +23,10 @@ export const Contact = () => {
         >
           {/* Info Side */}
           <div className="lg:w-1/2 p-8 md:p-16 lg:p-20 bg-slate-50 lg:border-r border-slate-100">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand/10 text-brand text-xs font-bold mb-8 md:mb-10">
+            <AnimatedBadge className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand/10 text-brand text-xs font-bold mb-8 md:mb-10" delay={0.05}>
               <span className="w-1 h-1 rounded-full bg-brand"></span>
               GET IN TOUCH
-            </div>
+            </AnimatedBadge>
             <AnimatedHeading
               className="text-3xl md:text-5xl font-extrabold mb-6 text-primary leading-tight font-display"
               delay={0.15}
@@ -34,9 +35,9 @@ export const Contact = () => {
             >
               Let's Get Your Business <span className="text-brand">Live</span> in Dubai
             </AnimatedHeading>
-            <p className="text-lg md:text-xl text-slate-600 mb-12 leading-relaxed">
+            <AnimatedParagraph className="text-lg md:text-xl text-slate-600 mb-12 leading-relaxed" delay={0.3}>
               Book a 30-minute call. We'll map out your exact setup path, timeline, and costs—completely free, zero pressure.
-            </p>
+            </AnimatedParagraph>
             
             <div className="space-y-6 md:space-y-8">
               {[
