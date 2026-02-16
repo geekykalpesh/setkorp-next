@@ -7,6 +7,7 @@ import type { AnimatedIconHandle } from "./ui/types";
 import { SlideTransition, StaggerContainer } from "./ui/TransitionEffects";
 import { SpringContainer, InteractiveSpring } from "./ui/SpringAnimations";
 import { WordHighlight } from "./ui/TextAnimations";
+import { AnimatedHeading } from "./ui/AnimatedText";
 
 export const ProblemSolution = () => {
   const checkRef = useRef<AnimatedIconHandle>(null);
@@ -20,9 +21,14 @@ export const ProblemSolution = () => {
           animationType="fadeUp"
           className="text-center mb-12 md:mb-20"
         >
-          <h2 className="text-3xl md:text-5xl font-extrabold text-primary mb-6 leading-tight font-display">
+          <AnimatedHeading
+            className="text-3xl md:text-5xl font-extrabold text-primary mb-6 leading-tight font-display"
+            delay={0.15}
+            springConfig="snappy"
+            staggerWords={true}
+          >
             Most Founders <span className="text-brand">Waste</span> 3 Months on Setup Alone
-          </h2>
+          </AnimatedHeading>
           <p className="text-lg md:text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed">
             You're here to build a business, not decode regulations. Here's what changes with Setkorp.
           </p>

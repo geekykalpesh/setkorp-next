@@ -4,6 +4,7 @@ import { Star } from "lucide-react";
 import { Marquee } from "./Marquee";
 import { motion } from "motion/react";
 import { springConfigs } from "./ui/SpringAnimations";
+import { AnimatedHeading } from "./ui/AnimatedText";
 
 const testimonials = [
   {
@@ -47,9 +48,14 @@ export const Testimonials = () => {
             <span className="w-1.5 h-1.5 rounded-full bg-brand"></span>
             <span className="text-xs tracking-wider uppercase">Wall of Love</span>
           </div>
-          <h2 className="text-3xl md:text-5xl font-extrabold text-primary font-display mb-6">
+          <AnimatedHeading
+            className="text-3xl md:text-5xl font-extrabold text-primary font-display mb-6"
+            delay={0.15}
+            springConfig="snappy"
+            staggerWords={true}
+          >
             Our Clients Speak: Testimonials of <span className="text-brand">Trust</span>
-          </h2>
+          </AnimatedHeading>
           <p className="text-slate-600 max-w-2xl mx-auto text-lg leading-relaxed">
             Join 500+ global entrepreneurs who chose Setkorp for their Dubai business expansion.
           </p>

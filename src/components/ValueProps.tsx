@@ -3,6 +3,7 @@
 import { FeaturesSectionWithHoverEffects } from "./ui/feature-section-with-hover-effects";
 import { SpringContainer } from "./ui/SpringAnimations";
 import { WordHighlight } from "./ui/TextAnimations";
+import { AnimatedHeading } from "./ui/AnimatedText";
 
 export const ValueProps = () => {
   return (
@@ -14,9 +15,14 @@ export const ValueProps = () => {
           animationType="fadeUp"
           className="max-w-3xl mx-auto text-center mb-12 md:mb-10"
         >
-          <h2 className="text-3xl md:text-5xl font-extrabold text-primary mb-6 font-display">
+          <AnimatedHeading
+            className="text-3xl md:text-5xl font-extrabold text-primary mb-6 font-display"
+            delay={0.15}
+            springConfig="snappy"
+            staggerWords={true}
+          >
             Why Founders Choose <span className="text-brand">Setkorp</span>
-          </h2>
+          </AnimatedHeading>
           <p className="text-lg md:text-xl text-slate-600 leading-relaxed">
             We're not consultants who disappear after setup. We're the team that answers your 11 PM questions about VAT filing.
           </p>

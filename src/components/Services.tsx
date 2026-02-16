@@ -5,6 +5,7 @@ import { cn } from "@/lib/utils";
 import Image from "next/image";
 import { motion } from "motion/react";
 import { springConfigs } from "./ui/SpringAnimations";
+import { AnimatedHeading } from "./ui/AnimatedText";
 
 const services = [
   {
@@ -104,9 +105,14 @@ export const Services = () => {
           <span className="w-1.5 h-1.5 rounded-full bg-brand"></span>
           <span className="text-xs tracking-wider uppercase">Complete Solutions</span>
         </div>
-        <h2 className="text-3xl md:text-5xl font-extrabold text-primary mb-6 font-display">
+        <AnimatedHeading
+          className="text-3xl md:text-5xl font-extrabold text-primary mb-6 font-display"
+          delay={0.15}
+          springConfig="snappy"
+          staggerWords={true}
+        >
           Everything You Need to <span className="text-brand">Start Operating</span>
-        </h2>
+        </AnimatedHeading>
         <p className="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
           Company registration is just the start. You need a bank account, an office, and compliant books. We handle all of it so you can focus on customers, not paperwork.
         </p>

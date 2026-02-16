@@ -6,6 +6,7 @@ import SendIcon from "./ui/send-icon";
 import type { AnimatedIconHandle } from "./ui/types";
 import { motion } from "motion/react";
 import { springConfigs } from "./ui/SpringAnimations";
+import { AnimatedHeading } from "./ui/AnimatedText";
 
 export const Contact = () => {
   const sendRef = useRef<AnimatedIconHandle>(null);
@@ -25,9 +26,14 @@ export const Contact = () => {
               <span className="w-1 h-1 rounded-full bg-brand"></span>
               GET IN TOUCH
             </div>
-            <h2 className="text-3xl md:text-5xl font-extrabold mb-6 text-primary leading-tight font-display">
+            <AnimatedHeading
+              className="text-3xl md:text-5xl font-extrabold mb-6 text-primary leading-tight font-display"
+              delay={0.15}
+              springConfig="snappy"
+              staggerWords={true}
+            >
               Let's Get Your Business <span className="text-brand">Live</span> in Dubai
-            </h2>
+            </AnimatedHeading>
             <p className="text-lg md:text-xl text-slate-600 mb-12 leading-relaxed">
               Book a 30-minute call. We'll map out your exact setup path, timeline, and costs—completely free, zero pressure.
             </p>

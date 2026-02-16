@@ -9,6 +9,7 @@ import { CardSpotlight } from "./ui/card-spotlight";
 import type { AnimatedIconHandle } from "./ui/types";
 import { motion } from "motion/react";
 import { springConfigs } from "./ui/SpringAnimations";
+import { AnimatedHeading } from "./ui/AnimatedText";
 
 export const Process = () => {
   const phoneRef = useRef<AnimatedIconHandle>(null);
@@ -29,9 +30,14 @@ export const Process = () => {
             <span className="w-1.5 h-1.5 rounded-full bg-brand"></span>
             <span className="text-xs tracking-wider uppercase">Simple Process</span>
           </div>
-          <h2 className="text-3xl md:text-5xl font-extrabold text-primary mb-6 font-display">
+          <AnimatedHeading
+            className="text-3xl md:text-5xl font-extrabold text-primary mb-6 font-display"
+            delay={0.15}
+            springConfig="snappy"
+            staggerWords={true}
+          >
             How We Get You Operational in <span className="text-brand">14 Days</span>
-          </h2>
+          </AnimatedHeading>
           <p className="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
             No surprises. No delays. Just a clear roadmap from first call to first invoice.
           </p>
