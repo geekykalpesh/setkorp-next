@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     siteName: "Setkorp",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "/og-image.webp",
         width: 1200,
         height: 630,
         alt: "Setkorp Dubai Business Setup",
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Dubai Business Setup | Setkorp",
     description: "Launch your Dubai business in 14 days with Setkorp.",
-    images: ["/og-image.jpg"],
+    images: ["/og-image.webp"],
   },
   alternates: {
     canonical: "https://www.setkorp.com",
@@ -79,7 +79,7 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "ProfessionalService",
               "name": "Setkorp Business Consultancy",
-              "image": "https://www.setkorp.com/og-image.jpg",
+              "image": "https://www.setkorp.com/og-image.webp",
               "@id": "https://www.setkorp.com",
               "url": "https://www.setkorp.com",
               "telephone": "+97140000000",
