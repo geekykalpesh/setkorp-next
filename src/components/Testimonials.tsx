@@ -6,6 +6,7 @@ import { motion } from "motion/react";
 import { springConfigs } from "./ui/SpringAnimations";
 import { AnimatedHeading } from "./ui/AnimatedText";
 import { AnimatedBadge, AnimatedParagraph } from "./ui/AnimationUtils";
+import Image from "next/image";
 
 const testimonials = [
   {
@@ -80,10 +81,13 @@ export const Testimonials = () => {
                 
                 <div className="flex items-center gap-4">
                   <div className="relative w-12 h-12 rounded-full overflow-hidden border-2 border-brand/20">
-                    <img 
+                    <Image 
                       src={t.image} 
                       alt={t.author} 
-                      className="w-full h-full object-cover"
+                      width={48}
+                      height={48}
+                      className="object-cover"
+                      loading="lazy"
                     />
                   </div>
                   <div className="flex flex-col">

@@ -2,11 +2,10 @@
 
 import { useRef } from "react";
 import Link from "next/link";
-import { Reveal } from "./Reveal";
 import PhoneVolumeIcon from "./ui/phone-volume-icon";
 import CalculatorIcon from "./ui/calculator-icon";
 import type { AnimatedIconHandle } from "./ui/types";
-import { SpringContainer, InteractiveSpring } from "./ui/SpringAnimations";
+import { InteractiveSpring } from "./ui/SpringAnimations";
 
 export const Hero = () => {
   const phoneRef = useRef<AnimatedIconHandle>(null);
@@ -22,6 +21,8 @@ export const Hero = () => {
           loop 
           playsInline 
           preload="auto"
+          // @ts-ignore - fetchPriority is supported in modern browsers but not yet in all TS types
+          fetchPriority="high"
           className="w-full h-auto max-h-[60vh] md:h-full md:max-h-none object-contain scale-[1.15] md:scale-100 hero-mobile-video" 
           style={{ backgroundColor: "#FDFDFD" }}
         >
@@ -33,15 +34,9 @@ export const Hero = () => {
       {/* Content Container - Buttons Only */}
       <div className="relative h-full flex items-end justify-center pb-8 md:pb-8 hero-mobile-content">
         <div className="container mx-auto px-4">
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 md:gap-6">
-            {/* Primary CTA with Spring Animation */}
-            <SpringContainer 
-              springConfig="snappy" 
-              delay={0}
-              animationType="fadeUp"
-              viewport={null}
-              className="w-full sm:w-auto"
-            >
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 md:gap-6 w-full">
+            {/* Primary CTA - Instant Rendering, Interactive Feedack */}
+            <div className="w-full sm:w-auto">
               <InteractiveSpring 
                 hoverScale={1.03} 
                 tapScale={0.97}
@@ -60,16 +55,10 @@ export const Hero = () => {
                   </span>
                 </Link>
               </InteractiveSpring>
-            </SpringContainer>
+            </div>
             
-            {/* Secondary CTA with Spring Animation */}
-            <SpringContainer 
-              springConfig="snappy" 
-              delay={0}
-              animationType="fadeUp"
-              viewport={null}
-              className="w-full sm:w-auto"
-            >
+            {/* Secondary CTA - Instant Rendering, Interactive Feedback */}
+            <div className="w-full sm:w-auto">
               <InteractiveSpring 
                 hoverScale={1.03} 
                 tapScale={0.97}
@@ -88,7 +77,7 @@ export const Hero = () => {
                   </span>
                 </Link>
               </InteractiveSpring>
-            </SpringContainer>
+            </div>
           </div>
         </div>
       </div>

@@ -26,11 +26,15 @@ const nextConfig: NextConfig = {
   // Performance & Bundle Optimization
   reactStrictMode: true, // Enable strict mode for better performance
   poweredByHeader: false, // Remove X-Powered-By header for security
+  
+  // Disable source maps in production for smaller bundle
+  productionBrowserSourceMaps: false,
 
   // Experimental Features for Performance
   experimental: {
-    optimizePackageImports: ["lucide-react", "motion"], // Tree-shake large packages
+    optimizePackageImports: ["lucide-react", "motion", "@radix-ui/react-slot"], // Tree-shake large packages
     webVitalsAttribution: ["CLS", "LCP"], // Track Core Web Vitals
+    optimizeCss: true, // Enable CSS optimization
   },
 
   // Turbopack Configuration (Next.js 16+)

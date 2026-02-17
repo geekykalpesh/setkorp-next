@@ -176,14 +176,12 @@
   html {
     background-color: #FDFDFD;
     scroll-behavior: smooth;
-    overflow-x: hidden;
   }
   body {
     @apply text-foreground;
     background-color: #FDFDFD;
     min-height: 100vh;
     min-height: 100svh;
-    overflow-x: hidden;
     position: relative;
     width: 100%;
   }

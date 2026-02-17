@@ -1,3 +1,5 @@
+"use client";
+
 import { Briefcase, Megaphone, Zap, Code, TrendingUp, ClipboardCheck, Users, Calendar } from "lucide-react";
 import Image from "next/image";
 import { CardSpotlight } from "./ui/card-spotlight";

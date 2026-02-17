@@ -5,11 +5,15 @@ import "./globals.css";
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
+  display: "swap",
+  preload: true,
 });
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   variable: "--font-jakarta",
   subsets: ["latin"],
+  display: "swap",
+  preload: true,
 });
 
 export const metadata: Metadata = {
@@ -68,7 +72,7 @@ export default function RootLayout({
       <head>
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://images.unsplash.com" crossOrigin="anonymous" />
-        <link rel="preload" href="/hero-section-video.webm" as="video" type="video/webm" />
+        <link rel="preload" href="/hero-section-video.webm" as="video" type="video/webm" fetchPriority="high" />
       </head>
       <body
         className={`${inter.variable} ${plusJakartaSans.variable} antialiased text-slate-900 font-sans overflow-x-hidden`}
