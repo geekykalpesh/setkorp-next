@@ -39,6 +39,7 @@ export const Hero = () => {
               springConfig="snappy" 
               delay={0}
               animationType="fadeUp"
+              viewport={null}
               className="w-full sm:w-auto"
             >
               <InteractiveSpring 
@@ -64,8 +65,9 @@ export const Hero = () => {
             {/* Secondary CTA with Spring Animation */}
             <SpringContainer 
               springConfig="snappy" 
-              delay={0.05}
+              delay={0}
               animationType="fadeUp"
+              viewport={null}
               className="w-full sm:w-auto"
             >
               <InteractiveSpring 

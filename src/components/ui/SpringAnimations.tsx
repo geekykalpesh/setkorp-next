@@ -46,6 +46,7 @@ interface SpringContainerProps {
   delay?: number;
   className?: string;
   animationType?: "scale" | "fadeUp" | "fadeIn" | "slideLeft" | "slideRight";
+  viewport?: { once?: boolean; margin?: string } | null;
 }
 
 /**
@@ -58,6 +59,7 @@ export function SpringContainer({
   delay = 0,
   className = "",
   animationType = "fadeUp",
+  viewport = { once: true, margin: "-100px" },
 }: SpringContainerProps) {
   const animations = {
     scale: {
@@ -87,8 +89,7 @@ export function SpringContainer({
   return (
     <motion.div
       initial={selectedAnimation.initial}
-      whileInView={selectedAnimation.animate}
-      viewport={{ once: true, margin: "-100px" }}
+      {...(viewport === null ? { animate: selectedAnimation.animate } : { whileInView: selectedAnimation.animate, viewport })}
       transition={{
         type: "spring",
         ...springConfigs[springConfig],
