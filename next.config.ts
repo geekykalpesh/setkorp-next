@@ -71,6 +71,9 @@ const nextConfig: NextConfig = {
       },
     ];
   },
+
+  // Resolve root directory warning
+  outputFileTracingRoot: process.cwd(),
 };
 
 export default nextConfig;
