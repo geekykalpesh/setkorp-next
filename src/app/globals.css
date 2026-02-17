@@ -174,14 +174,18 @@
 
 @layer base {
   html {
-    background-color: #0A1628; /* Footer color for bottom overscroll */
+    background-color: #FDFDFD;
     scroll-behavior: smooth;
+    overflow-x: hidden;
   }
   body {
     @apply text-foreground;
-    background-color: #FDFDFD; /* Main color for top overscroll */
+    background-color: #FDFDFD;
     min-height: 100vh;
     min-height: 100svh;
+    overflow-x: hidden;
+    position: relative;
+    width: 100%;
   }
   button, a, select, details, summary {
     cursor: pointer;

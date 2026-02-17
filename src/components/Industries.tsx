@@ -33,7 +33,7 @@ const IndustryCard = ({ industry }: { industry: typeof industries[0] }) => {
 
 export const Industries = () => {
   return (
-    <section id="industries" className="py-12 md:py-24 bg-surface m-4 md:m-8 lg:m-12">
+    <section id="industries" className="py-12 md:py-24 bg-surface m-4 md:m-8 lg:m-12 overflow-hidden rounded-3xl">
       <div className="container mx-auto">
         <div className="max-w-6xl mx-auto">
           {/* Welcome Header */}

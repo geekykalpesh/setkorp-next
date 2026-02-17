@@ -14,7 +14,7 @@ export const ProblemSolution = () => {
   const checkRef = useRef<AnimatedIconHandle>(null);
 
   return (
-    <section className="py-12 md:py-24" style={{ backgroundColor: '#FCFCFC' }}>
+    <section className="py-12 md:py-24 overflow-hidden" style={{ backgroundColor: '#FCFCFC' }}>
       <div className="container mx-auto px-6 md:px-20">
         <SpringContainer 
           springConfig="smooth" 
