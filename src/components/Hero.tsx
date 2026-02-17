@@ -21,7 +21,7 @@ export const Hero = () => {
           muted 
           loop 
           playsInline 
-          preload="none"
+          preload="auto"
           className="w-full h-auto max-h-[60vh] md:h-full md:max-h-none object-contain scale-[1.15] md:scale-100 hero-mobile-video" 
           style={{ backgroundColor: "#FDFDFD" }}
         >
@@ -37,7 +37,7 @@ export const Hero = () => {
             {/* Primary CTA with Spring Animation */}
             <SpringContainer 
               springConfig="snappy" 
-              delay={0.05}
+              delay={0}
               animationType="fadeUp"
               className="w-full sm:w-auto"
             >
@@ -64,7 +64,7 @@ export const Hero = () => {
             {/* Secondary CTA with Spring Animation */}
             <SpringContainer 
               springConfig="snappy" 
-              delay={0.15}
+              delay={0.05}
               animationType="fadeUp"
               className="w-full sm:w-auto"
             >
