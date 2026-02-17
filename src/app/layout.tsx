@@ -66,7 +66,7 @@ export default function RootLayout({
       <head>
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://images.unsplash.com" crossOrigin="anonymous" />
-        <link rel="preload" href="/hero-section-video.mp4" as="video" type="video/mp4" />
+        <link rel="preload" href="/hero-section-video.webm" as="video" type="video/webm" />
       </head>
       <body
         className={`${inter.variable} ${plusJakartaSans.variable} antialiased text-slate-900 font-sans overflow-x-hidden`}

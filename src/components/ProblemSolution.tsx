@@ -55,7 +55,7 @@ export const ProblemSolution = () => {
                       playsInline
                       className="w-full h-full object-cover rounded-lg"
                     >
-                      <source src="/unsorted.mp4" type="video/mp4" />
+                      <source src="/unsorted.webm" type="video/webm" />
                       Your browser does not support the video tag.
                     </video>
                   </div>
@@ -108,7 +108,7 @@ export const ProblemSolution = () => {
                         playsInline
                         className="w-full h-full object-cover rounded-lg"
                       >
-                        <source src="/sorted.mp4" type="video/mp4" />
+                        <source src="/sorted.webm" type="video/webm" />
                         Your browser does not support the video tag.
                       </video>
                     </div>

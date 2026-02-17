@@ -74,7 +74,7 @@ export const Industries = () => {
                 playsInline
                 className="w-[105%] max-w-none h-auto rounded-3xl translate-x-3"
               >
-                <source src="/doller.mp4" type="video/mp4" />
+                <source src="/doller.webm" type="video/webm" />
                 Your browser does not support the video tag.
               </video>
             </div>

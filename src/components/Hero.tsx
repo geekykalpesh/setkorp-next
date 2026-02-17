@@ -25,7 +25,7 @@ export const Hero = () => {
           className="w-full h-auto max-h-[60vh] md:h-full md:max-h-none object-contain scale-[1.15] md:scale-100 hero-mobile-video" 
           style={{ backgroundColor: "#FDFDFD" }}
         >
-          <source src="/hero-section-video.mp4" type="video/mp4" />
+          <source src="/hero-section-video.webm" type="video/webm" />
           Your browser does not support the video tag.
         </video>
       </div>
